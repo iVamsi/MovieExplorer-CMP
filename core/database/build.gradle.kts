@@ -4,6 +4,7 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             implementation(project(":core:model"))
+            implementation(project(":core:common"))
             implementation(lib("paging-common"))
         }
         androidMain.dependencies {
