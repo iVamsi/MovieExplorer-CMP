@@ -1,0 +1,168 @@
+###############################################
+# Android
+###############################################
+
+# Built output
+/build/
+**/build/
+.tools/
+
+# Generated files
+bin/
+gen/
+out/
+release/
+
+# Gradle wrapper
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+*.jar
+# Vendored Cast / DIAL SDK — now published to localMaven/ with versioning
+!libs/dial-core.jar
+!localMaven/**/*.jar
+!localMaven/**/*.aar
+# CI/local ktfmt bootstrap jar under .tools/
+!.tools/**/*.jar
+
+# IntelliJ / Android Studio project files
+*.iml
+*.ipr
+*.iws
+
+# Local machine configuration (never commit these)
+local.properties
+
+###############################################
+# Gradle
+###############################################
+
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+.gradletasknamecache
+
+###############################################
+# IDE and Editor folders
+###############################################
+
+# IntelliJ IDEA / Android Studio
+.idea/
+# Keep the module and project files that are useful in version control
+!.idea/modules.xml
+!.idea/runConfigurations/
+
+# VS Code
+.vscode/
+
+# Vim
+*.swp
+*.swo
+*.swn
+.vim/
+
+# Emacs
+*~
+\#*\#
+
+###############################################
+# Kotlin
+###############################################
+
+.kotlin/
+
+###############################################
+# Claude / AI tools
+###############################################
+
+.claude/
+
+# Local-only Cursor rules (never in repo)
+.cursorrules
+
+###############################################
+# OS generated files
+###############################################
+
+# macOS
+.DS_Store
+.DS_Store?
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+._*
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+
+###############################################
+# Sensitive files
+###############################################
+
+# API keys, secrets, and signing configs — never commit these
+*.jks
+*.keystore
+keystore.properties
+google-services.json
+firebase.json
+*.p12
+*.pk8
+
+###############################################
+# Test / coverage reports
+###############################################
+
+reports/
+*.exec
+.coverage
+
+###############################################
+# Profiling and captures
+###############################################
+
+captures/
+*.hprof
+
+###############################################
+# Temporary and backup files
+###############################################
+
+*.tmp
+*.temp
+*.bak
+*.orig
+*.log
+.worktrees/
+
+# Codebase Memory MCP — graph is machine-specific (qualified names embed local path); never commit
+.codebase-memory/
+
+# Cursor MCP — copy from .cursor/mcp.json.example and adjust if not on PATH
+.cursor/mcp.json
+
+# CI retained Wave 0 logs (survive ./gradlew clean)
+artifacts/
+
+###############################################
+# iOS / KMP
+###############################################
+
+iosApp/iosApp.xcodeproj/xcuserdata/
+iosApp/iosApp.xcworkspace/xcuserdata/
+*.xcuserstate
+.kotlin/
+build/
