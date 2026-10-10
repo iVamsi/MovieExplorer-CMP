@@ -1,0 +1,94 @@
+# Detekt overrides on top of the default ruleset.
+# Run: ./gradlew detekt
+# Report: <module>/build/reports/detekt/detekt.html
+build:
+  maxIssues: 0
+  excludeCorrectable: false
+
+complexity:
+  LongMethod:
+    active: true
+    threshold: 80
+    ignoreAnnotated: ['androidx.compose.runtime.Composable']
+  LongParameterList:
+    active: true
+    functionThreshold: 8
+    constructorThreshold: 12
+    ignoreDefaultParameters: true
+    ignoreDataClasses: true
+    ignoreAnnotated: ['dagger.assisted.AssistedInject', 'javax.inject.Inject', 'androidx.compose.runtime.Composable']
+  TooManyFunctions:
+    active: true
+    thresholdInClasses: 20
+    thresholdInFiles: 20
+    ignoreOverridden: true
+    ignoreDeprecated: true
+    ignorePrivate: true
+    ignoreAnnotatedFunctions: ['androidx.compose.runtime.Composable']
+  CyclomaticComplexMethod:
+    active: true
+    threshold: 20
+    ignoreAnnotated: ['androidx.compose.runtime.Composable']
+  LargeClass:
+    active: true
+    threshold: 600
+  NestedBlockDepth:
+    threshold: 5
+
+style:
+  MagicNumber:
+    active: false
+  MaxLineLength:
+    active: false
+  ReturnCount:
+    max: 5
+  UnusedPrivateMember:
+    active: true
+    ignoreAnnotated: ['androidx.compose.runtime.Composable', 'androidx.compose.ui.tooling.preview.Preview']
+  WildcardImport:
+    active: true
+    excludeImports: ['java.util.*']
+
+naming:
+  FunctionNaming:
+    functionPattern: '[a-zA-Z][a-zA-Z0-9]*'
+    ignoreAnnotated: ['androidx.compose.runtime.Composable']
+  TopLevelPropertyNaming:
+    constantPattern: '[A-Z][A-Z0-9_]*|[a-z][A-Za-z0-9]*'
+
+# Ktlint formatting ruleset provided via detekt-formatting plugin jar.
+formatting:
+  active: true
+  android: true
+  autoCorrect: false
+  # ktfmt is the source of truth for these layout rules (`./gradlew checkKotlinFormatting`).
+  # Disable ktlint-backed duplicates here so Detekt focuses on semantic/static checks.
+  AnnotationOnSeparateLine:
+    active: false
+  MaximumLineLength:
+    active: false
+  Indentation:
+    active: false
+  ImportOrdering:
+    active: false
+  FinalNewline:
+    active: true
+  NoWildcardImports:
+    active: true
+  Filename:
+    active: false
+
+performance:
+  SpreadOperator:
+    active: false
+
+exceptions:
+  TooGenericExceptionCaught:
+    active: false
+  SwallowedException:
+    active: true
+    ignoredExceptionTypes: ['InterruptedException', 'NumberFormatException', 'ParseException', 'MalformedURLException', 'CancellationException']
+
+empty-blocks:
+  EmptyFunctionBlock:
+    ignoreOverriddenFunctions: true
