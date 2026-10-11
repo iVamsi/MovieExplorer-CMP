@@ -9,6 +9,7 @@ kotlin {
             implementation(project(":core:network"))
             implementation(project(":core:database"))
             implementation(lib("paging-common"))
+            implementation(lib("ktor-client-core"))
             implementation(lib("datastore-preferences"))
             implementation(lib("coil-compose"))
             implementation(lib("multiplatform-settings"))
