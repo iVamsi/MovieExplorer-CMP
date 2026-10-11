@@ -75,7 +75,17 @@ interface MovieDao {
 
     @Query("DELETE FROM movies WHERE id = :movieId") suspend fun deleteMovieById(movieId: Int)
 
-    @Query("DELETE FROM movies WHERE cachedAt < :timestamp")
+    @Query(
+        """
+        DELETE FROM movies
+        WHERE cachedAt < :timestamp
+          AND id NOT IN (SELECT contentId FROM offline_content WHERE contentType = 'MOVIE')
+          AND id NOT IN (SELECT contentId FROM watchlist_items WHERE contentType = 'MOVIE')
+          AND id NOT IN (SELECT contentId FROM favorite_items WHERE contentType = 'MOVIE')
+          AND id NOT IN (SELECT contentId FROM collection_items WHERE contentType = 'MOVIE')
+          AND id NOT IN (SELECT contentId FROM user_ratings WHERE contentType = 'MOVIE')
+        """
+    )
     suspend fun deleteOldMovies(timestamp: Long)
 
     @Query("DELETE FROM movies") suspend fun deleteAllMovies()

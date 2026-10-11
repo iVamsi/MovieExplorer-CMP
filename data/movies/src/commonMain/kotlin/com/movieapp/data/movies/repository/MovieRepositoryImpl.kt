@@ -363,7 +363,6 @@ class MovieRepositoryImpl(
     override suspend fun refreshMovies() =
         withContext(dispatchers.io) {
             try {
-                movieDao.deleteOldMovies(cacheCutoffMillis())
                 val lang = preferencesRepository.tmdbLanguage.first()
                 val region = preferencesRepository.watchRegion.first()
                 val popularResponse =
@@ -379,7 +378,10 @@ class MovieRepositoryImpl(
                         topRatedResponse.results +
                         upcomingResponse.results +
                         nowPlayingResponse.results
-                movieDao.insertMovies(mapper.mapToEntityList(allMovies))
+                transactionRunner.run {
+                    movieDao.deleteOldMovies(cacheCutoffMillis())
+                    movieDao.insertMovies(mapper.mapToEntityList(allMovies))
+                }
             } catch (e: CancellationException) {
                 throw e
             } catch (_: Exception) {

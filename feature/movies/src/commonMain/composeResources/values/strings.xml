@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cd_add_watchlist">Add to watchlist</string>
+    <string name="cd_remove_watchlist">Remove from watchlist</string>
+    <string name="cd_add_favorite">Add to favorites</string>
+    <string name="cd_remove_favorite">Remove from favorites</string>
+    <string name="cd_save_offline">Save for offline</string>
+    <string name="cd_saved_offline">Saved for offline</string>
+    <string name="cd_genre">Genre: %1$s</string>
+    <string name="cd_keyword">Keyword: %1$s</string>
+    <string name="cd_open_actor_profile">Open profile for %1$s</string>
+    <string name="cd_movie_backdrop">Backdrop for %1$s</string>
+
+    <string name="watchlist_screen_title">Watchlist</string>
+    <string name="favorites_screen_title">Favorites</string>
+    <string name="watchlist_section_movies">Movies</string>
+    <string name="watchlist_section_tv_series">TV Series</string>
+    <string name="watchlist_empty_title">Your Watchlist is Empty</string>
+    <string name="watchlist_empty_subtitle">Add movies and TV series to your watchlist to keep track of what you want to watch</string>
+    <string name="watchlist_discover_button">Discover Content</string>
+    <string name="favorites_section_movies">Favorite Movies</string>
+    <string name="favorites_section_series">Favorite TV Series</string>
+    <string name="favorites_section_actors">Favorite Actors</string>
+    <string name="favorites_empty_title">No Favorites Yet</string>
+    <string name="favorites_empty_subtitle">Start adding movies, series, and actors to your favorites to see them here</string>
+    <string name="favorites_discover_button">Find something to watch</string>
+    <string name="library_loading">Loading your library</string>
+    <string name="sort_recently_added">Recently Added</string>
+    <string name="sort_alphabetical_az">Alphabetical (A-Z)</string>
+    <string name="sort_alphabetical_za">Alphabetical (Z-A)</string>
+
+    <string name="home_discover_title">Discover</string>
+    <string name="home_discover_eyebrow">CURATED FOR BROWSING</string>
+    <string name="home_category_all">All</string>
+    <string name="home_section_now_playing">Now Playing</string>
+    <string name="home_section_popular_movies">Popular Movies</string>
+    <string name="home_section_top_rated_movies">Top Rated Movies</string>
+    <string name="home_section_trending_series">Trending Series</string>
+    <string name="home_section_popular_series">Popular Series</string>
+    <string name="home_section_top_rated_series">Top Rated Series</string>
+    <string name="home_upcoming_button">Upcoming</string>
+    <string name="home_view_details">View details</string>
+    <string name="home_category_movies">Movies</string>
+    <string name="home_category_tv">TV</string>
+    <string name="home_spotlight_metadata">%1$s · %2$s</string>
+    <string name="home_nothing_to_show">Nothing to show</string>
+    <string name="home_section_load_error">Couldn’t load %1$s</string>
+    <string name="home_section_empty">No %1$s available right now</string>
+    <string name="home_offline_hint">Please check your internet connection</string>
+    <string name="upcoming_calendar_title">Upcoming releases</string>
+    <string name="upcoming_all_dates">All dates</string>
+    <string name="upcoming_tba">To be announced</string>
+    <string name="favorites_grid_movies">Favorite movies</string>
+    <string name="favorites_grid_series">Favorite series</string>
+    <string name="favorites_grid_actors">Favorite actors</string>
+    <string name="watchlist_grid_movies">Movies in your watchlist</string>
+    <string name="watchlist_grid_series">Series in your watchlist</string>
+</resources>

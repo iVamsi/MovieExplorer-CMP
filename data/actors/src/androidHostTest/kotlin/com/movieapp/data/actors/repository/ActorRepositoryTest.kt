@@ -66,6 +66,33 @@ class ActorRepositoryTest {
     }
 
     @Test
+    fun `getActorByIdFlow - cached summary - fetches biography`() = runTest {
+        val summary = Actor(id = 287, name = "Brad Pitt")
+        every { actorDao.getActorByIdFlow(287) } returns flowOf(mapper.mapToEntity(summary))
+        coEvery { apiService.getActorDetails(287, language = "en-US") } returns
+            summary.copy(biography = "Full biography")
+
+        repository.getActorByIdFlow(287).test {
+            assertThat(awaitItem()).isEqualTo(Result.Loading)
+            assertThat((awaitItem() as Result.Success).data.biography).isEqualTo("Full biography")
+            awaitComplete()
+        }
+    }
+
+    @Test
+    fun `getActorByIdFlow - offline - returns cached details`() = runTest {
+        val cached = Actor(id = 287, name = "Brad Pitt", biography = "Saved biography")
+        coEvery { apiService.getActorDetails(287, language = "en-US") } throws IOException("offline")
+        coEvery { actorDao.getActorById(287) } returns mapper.mapToEntity(cached)
+
+        repository.getActorByIdFlow(287).test {
+            assertThat(awaitItem()).isEqualTo(Result.Loading)
+            assertThat((awaitItem() as Result.Success).data.biography).isEqualTo("Saved biography")
+            awaitComplete()
+        }
+    }
+
+    @Test
     fun `getActorById - api success - inserts entity and returns Success`() = runTest {
         val actor = Actor(id = 287, name = "Brad Pitt")
         coEvery { apiService.getActorDetails(287, language = "en-US") } returns actor

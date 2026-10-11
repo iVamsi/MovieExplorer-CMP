@@ -65,6 +65,21 @@ class SeriesRepositoryTest {
     }
 
     @Test
+    fun `getSeriesByIdFlow - offline - returns cached details`() = runTest {
+        val cached = TvSeries(id = 77, name = "Saved series", numberOfSeasons = 5)
+        coEvery {
+            apiService.getTvSeriesDetails(77, language = "en-US", appendToResponse = "videos")
+        } throws IOException("offline")
+        coEvery { tvSeriesDao.getTvSeriesById(77) } returns mapper.mapToEntity(cached)
+
+        repository.getSeriesByIdFlow(77).test {
+            assertThat(awaitItem()).isEqualTo(Result.Loading)
+            assertThat((awaitItem() as Result.Success).data.numberOfSeasons).isEqualTo(5)
+            awaitComplete()
+        }
+    }
+
+    @Test
     fun `getTrendingTvSeriesPage - api success - emits Loading then Success and caches`() =
         runTest {
             val series = listOf(TvSeries(id = 1, name = "Breaking Bad"))
@@ -212,16 +227,21 @@ class SeriesRepositoryTest {
     }
 
     @Test
-    fun `getSeriesByIdFlow - entity in dao - emits Loading then Success without api call`() =
+    fun `getSeriesByIdFlow - cached summary - fetches full details`() =
         runTest {
             val series = TvSeries(id = 77, name = "Cached Flow Series")
             every { tvSeriesDao.getTvSeriesByIdFlow(77) } returns flowOf(mapper.mapToEntity(series))
+
+            val details = series.copy(numberOfSeasons = 5)
+            coEvery {
+                apiService.getTvSeriesDetails(77, language = "en-US", appendToResponse = "videos")
+            } returns details
 
             repository.getSeriesByIdFlow(77).test {
                 assertThat(awaitItem()).isEqualTo(Result.Loading)
                 val success = awaitItem()
                 assertThat(success).isInstanceOf(Result.Success::class.java)
-                assertThat((success as Result.Success).data.name).isEqualTo("Cached Flow Series")
+                assertThat((success as Result.Success).data.numberOfSeasons).isEqualTo(5)
                 awaitComplete()
             }
         }

@@ -1,10 +1,19 @@
 package com.movieapp.data.user.sync
 
+import com.movieapp.core.database.dao.ActorDao
+import com.movieapp.core.database.dao.MovieDao
+import com.movieapp.core.database.dao.TvSeriesDao
 import com.movieapp.core.database.dao.UserDao
+import com.movieapp.core.database.entity.ActorEntity
 import com.movieapp.core.database.entity.FavoriteItemEntity
+import com.movieapp.core.database.entity.MovieEntity
+import com.movieapp.core.database.entity.TvSeriesEntity
 import com.movieapp.core.database.entity.UserRatingEntity
 import com.movieapp.core.database.entity.WatchlistItemEntity
+import com.movieapp.core.model.Actor
 import com.movieapp.core.model.ContentType
+import com.movieapp.core.model.Movie
+import com.movieapp.core.model.TvSeries
 import com.movieapp.core.network.AccountFavoriteBody
 import com.movieapp.core.network.AccountWatchlistBody
 import com.movieapp.core.network.MovieTvRatingBody
@@ -26,6 +35,9 @@ class TmdbUserLibrarySync(
     private val api: TmdbApiService,
     private val sessionStorage: TmdbSessionStorage,
     private val userDao: UserDao,
+    private val movieDao: MovieDao,
+    private val tvSeriesDao: TvSeriesDao,
+    private val actorDao: ActorDao,
     private val clock: Clock,
     private val sessionInvalidator: Lazy<AuthSessionInvalidator>,
 ) {
@@ -53,6 +65,7 @@ class TmdbUserLibrarySync(
                 guard401OrNull { api.getFavoriteMovies(accountId, sessionId, page = page) }
                     ?: return
             for (movie in res.results) {
+                cacheMovie(movie)
                 mergeFavorite(movie.id, ContentType.MOVIE)
             }
             if (page >= res.totalPages || res.results.isEmpty()) break
@@ -66,6 +79,7 @@ class TmdbUserLibrarySync(
             val res =
                 guard401OrNull { api.getFavoriteTv(accountId, sessionId, page = page) } ?: return
             for (tv in res.results) {
+                cacheTvSeries(tv)
                 mergeFavorite(tv.id, ContentType.TV_SERIES)
             }
             if (page >= res.totalPages || res.results.isEmpty()) break
@@ -80,6 +94,7 @@ class TmdbUserLibrarySync(
                 guard401OrNull { api.getWatchlistMovies(accountId, sessionId, page = page) }
                     ?: return
             for (movie in res.results) {
+                cacheMovie(movie)
                 mergeWatchlist(movie.id, ContentType.MOVIE)
             }
             if (page >= res.totalPages || res.results.isEmpty()) break
@@ -93,6 +108,7 @@ class TmdbUserLibrarySync(
             val res =
                 guard401OrNull { api.getWatchlistTv(accountId, sessionId, page = page) } ?: return
             for (tv in res.results) {
+                cacheTvSeries(tv)
                 mergeWatchlist(tv.id, ContentType.TV_SERIES)
             }
             if (page >= res.totalPages || res.results.isEmpty()) break
@@ -107,6 +123,7 @@ class TmdbUserLibrarySync(
                 guard401OrNull { api.getFavoritePeople(accountId, sessionId, page = page) }
                     ?: return
             for (person in res.results) {
+                cacheActor(person)
                 mergeFavorite(person.id, ContentType.ACTOR)
             }
             if (page >= res.totalPages || res.results.isEmpty()) break
@@ -120,6 +137,7 @@ class TmdbUserLibrarySync(
             val res =
                 guard401OrNull { api.getRatedMovies(accountId, sessionId, page = page) } ?: return
             for (movie in res.results) {
+                cacheMovie(movie)
                 val r = movie.accountRating ?: continue
                 mergeRating(movie.id, ContentType.MOVIE, r)
             }
@@ -133,11 +151,30 @@ class TmdbUserLibrarySync(
         while (true) {
             val res = guard401OrNull { api.getRatedTv(accountId, sessionId, page = page) } ?: return
             for (tv in res.results) {
+                cacheTvSeries(tv)
                 val r = tv.accountRating ?: continue
                 mergeRating(tv.id, ContentType.TV_SERIES, r)
             }
             if (page >= res.totalPages || res.results.isEmpty()) break
             page++
+        }
+    }
+
+    private suspend fun cacheMovie(movie: Movie) {
+        if (movieDao.getMovieById(movie.id) == null) {
+            movieDao.insertMovie(movie.toLibraryEntity(clock.now().toEpochMilliseconds()))
+        }
+    }
+
+    private suspend fun cacheTvSeries(tvSeries: TvSeries) {
+        if (tvSeriesDao.getTvSeriesById(tvSeries.id) == null) {
+            tvSeriesDao.insertTvSeries(tvSeries.toLibraryEntity(clock.now().toEpochMilliseconds()))
+        }
+    }
+
+    private suspend fun cacheActor(actor: Actor) {
+        if (actorDao.getActorById(actor.id) == null) {
+            actorDao.insertActor(actor.toLibraryEntity(clock.now().toEpochMilliseconds()))
         }
     }
 
@@ -272,3 +309,113 @@ class TmdbUserLibrarySync(
         }
     }
 }
+
+private fun Movie.toLibraryEntity(cachedAt: Long) =
+    MovieEntity(
+        id = id,
+        title = title,
+        overview = overview,
+        posterPath = posterPath,
+        backdropPath = backdropPath,
+        releaseDate = releaseDate,
+        voteAverage = voteAverage,
+        voteCount = voteCount,
+        popularity = popularity,
+        adult = adult,
+        originalLanguage = originalLanguage,
+        originalTitle = originalTitle,
+        video = video,
+        genreIds = genreIds,
+        genres = genres,
+        runtime = runtime,
+        status = status,
+        tagline = tagline,
+        budget = budget,
+        revenue = revenue,
+        homepage = homepage,
+        imdbId = imdbId,
+        productionCompanies = null,
+        productionCountries = null,
+        spokenLanguages = null,
+        belongsToCollection = null,
+        videos = videos,
+        images = null,
+        credits = null,
+        similar = null,
+        recommendations = null,
+        reviews = null,
+        keywords = null,
+        externalIds = null,
+        watchProviders = null,
+        cachedAt = cachedAt,
+    )
+
+private fun TvSeries.toLibraryEntity(cachedAt: Long) =
+    TvSeriesEntity(
+        id = id,
+        name = name,
+        overview = overview,
+        posterPath = posterPath,
+        backdropPath = backdropPath,
+        firstAirDate = firstAirDate,
+        lastAirDate = lastAirDate,
+        voteAverage = voteAverage,
+        voteCount = voteCount,
+        popularity = popularity,
+        adult = adult,
+        originalLanguage = originalLanguage,
+        originalName = originalName,
+        originCountry = originCountry,
+        genreIds = genreIds,
+        genres = genres,
+        episodeRunTime = episodeRunTime,
+        numberOfEpisodes = numberOfEpisodes,
+        numberOfSeasons = numberOfSeasons,
+        status = status,
+        tagline = tagline,
+        type = type,
+        homepage = homepage,
+        inProduction = inProduction,
+        languages = languages,
+        networks = null,
+        productionCompanies = null,
+        productionCountries = null,
+        spokenLanguages = null,
+        seasons = null,
+        videos = videos,
+        images = null,
+        credits = null,
+        similar = null,
+        recommendations = null,
+        reviews = null,
+        keywords = null,
+        externalIds = null,
+        watchProviders = null,
+        createdBy = null,
+        lastEpisodeToAir = null,
+        nextEpisodeToAir = null,
+        cachedAt = cachedAt,
+    )
+
+private fun Actor.toLibraryEntity(cachedAt: Long) =
+    ActorEntity(
+        id = id,
+        name = name,
+        biography = biography,
+        birthday = birthday,
+        deathday = deathday,
+        placeOfBirth = placeOfBirth,
+        profilePath = profilePath,
+        adult = adult,
+        gender = gender,
+        knownForDepartment = knownForDepartment,
+        originalName = originalName,
+        popularity = popularity,
+        alsoKnownAs = alsoKnownAs,
+        images = null,
+        movieCredits = null,
+        tvCredits = null,
+        externalIds = null,
+        taggedImages = null,
+        cachedAt = cachedAt,
+    )
