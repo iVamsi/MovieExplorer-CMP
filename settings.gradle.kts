@@ -35,5 +35,6 @@ kover {
         excludedProjects.addAll(":androidApp", ":core:testing")
         excludedClasses.addAll("*.ComposableSingletons*", "*.*\$*Preview*", "*.generated.resources.*", "com.movieapp.config.*")
         excludesAnnotatedBy.add("androidx.compose.ui.tooling.preview.Preview")
+        verify { rule { bound { minValue = 14 } } }
     }
 }
