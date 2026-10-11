@@ -70,6 +70,7 @@ import org.jetbrains.compose.resources.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.koin.compose.viewmodel.koinViewModel
+import org.koin.core.parameter.parametersOf
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil3.compose.AsyncImage
 import com.movieapp.core.common.formatShort
@@ -91,11 +92,12 @@ import com.movieapp.core.ui.utils.toImageUrl
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalMaterial3ExpressiveApi::class)
 @Composable
 fun ActorDetailScreen(
+    actorId: Int,
     onBackClick: () -> Unit,
     onMovieClick: (Int) -> Unit,
     onSeriesClick: (Int) -> Unit,
     onOpenImageGallery: (Int) -> Unit = {},
-    viewModel: ActorDetailViewModel = koinViewModel(),
+    viewModel: ActorDetailViewModel = koinViewModel { parametersOf(actorId) },
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
     val snackbarHostState = remember { SnackbarHostState() }

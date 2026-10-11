@@ -1,6 +1,5 @@
 package com.movieapp.feature.actors.screens.actor
 
-import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.movieapp.core.common.Result
@@ -41,15 +40,12 @@ sealed interface ActorDetailSideEffect {
     data object FavoriteUpdateFailed : ActorDetailSideEffect
 }
 
-class ActorDetailViewModel
-constructor(
+class ActorDetailViewModel(
+    private val actorId: Int,
     private val actorRepository: ActorRepository,
     private val userRepository: UserRepository,
     private val toggleFavoriteActorUseCase: ToggleFavoriteActorUseCase,
-    savedStateHandle: SavedStateHandle,
 ) : ViewModel() {
-
-    private val actorId: Int = checkNotNull(savedStateHandle["actorId"])
 
     private val _uiState = MutableStateFlow(ActorDetailUiState())
     val uiState: StateFlow<ActorDetailUiState> = _uiState.asStateFlow()
