@@ -25,6 +25,7 @@ jobs:
           echo "TMDB_API_KEY=${{ secrets.TMDB_API_KEY }}" >> local.properties
           echo "TMDB_BASE_URL=https://api.themoviedb.org/3/" >> local.properties
       - run: ./gradlew detekt testAndroidHostTest koverVerify
+      - run: ./gradlew --stop
       - run: ./gradlew :androidApp:assembleDebug :androidApp:assembleRelease
       - uses: actions/upload-artifact@v7
         if: always()
