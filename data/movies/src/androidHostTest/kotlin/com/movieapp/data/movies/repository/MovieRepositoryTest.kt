@@ -423,6 +423,17 @@ class MovieRepositoryTest {
             }
         }
 
+    @Test
+    fun `refreshMovies - request fails - keeps cached movies`() = runTest {
+        coEvery {
+            apiService.getPopularMovies(page = 1, language = "en-US", region = "US")
+        } throws IOException("offline")
+
+        repository.refreshMovies()
+
+        coVerify(exactly = 0) { movieDao.deleteOldMovies(any()) }
+    }
+
     private fun testMovie(id: Int, title: String): Movie =
         Movie(
             id = id,

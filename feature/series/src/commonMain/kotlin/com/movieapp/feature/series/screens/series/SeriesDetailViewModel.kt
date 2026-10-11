@@ -261,7 +261,7 @@ class SeriesDetailViewModel(
                     is Result.Loading -> Unit
                     is Result.Success -> {
                         val country =
-                            result.data.results[region] ?: result.data.results.values.firstOrNull()
+                            result.data.results[region]
                         val merged = buildList {
                             country?.flatrate?.let { addAll(it) }
                             country?.rent?.let { addAll(it) }

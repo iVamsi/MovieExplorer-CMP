@@ -106,6 +106,33 @@ class SeriesDetailViewModelTest {
     }
 
     @Test
+    fun `loadWatchProviders - selected region absent - does not show foreign providers`() = runTest {
+        val providers = WatchProviders(
+            results = mapOf(
+                "GB" to WatchProviderCountry(
+                    link = "https://tmdb/watch/gb",
+                    flatrate = listOf(WatchProvider(
+                        displayPriority = 0,
+                        logoPath = "/n.png",
+                        providerId = 8,
+                        providerName = "Netflix",
+                    )),
+                )
+            )
+        )
+        coEvery { seriesRepository.getSeriesByIdFlow(testSeries.id) } returns
+            flow { emit(Result.Success(testSeries)) }
+        coEvery { userRepository.isFavorite(testSeries.id, ContentType.TV_SERIES) } returns false
+        coEvery { userRepository.isInWatchlist(testSeries.id, ContentType.TV_SERIES) } returns false
+
+        val viewModel = createViewModel(watchProviders = providers)
+
+        assertThat(viewModel.uiState.value.watchProvidersForRegion).isEmpty()
+        assertThat(viewModel.uiState.value.watchProviderLink).isNull()
+        assertThat(viewModel.uiState.value.watchProvidersLoading).isFalse()
+    }
+
+    @Test
     fun `loadSeriesDetails - when flow returns success - state shows series`() = runTest {
         coEvery { seriesRepository.getSeriesByIdFlow(testSeries.id) } returns
             flow {

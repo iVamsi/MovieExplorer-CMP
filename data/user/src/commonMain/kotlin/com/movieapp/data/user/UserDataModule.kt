@@ -23,6 +23,9 @@ val userDataModule = module {
             api = get(),
             sessionStorage = get(),
             userDao = get(),
+            movieDao = get(),
+            tvSeriesDao = get(),
+            actorDao = get(),
             clock = get(),
             sessionInvalidator = lazy { get<AuthSessionInvalidator>() },
         )

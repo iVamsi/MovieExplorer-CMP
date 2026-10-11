@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="collections_heading">Mis colecciones</string>
+    <string name="collections_create_title">Crear colección</string>
+    <string name="collections_edit_title">Editar colección</string>
+    <string name="collections_delete_title">Eliminar colección</string>
+    <string name="collections_delete_message">¿Eliminar «%1$s»? Esta acción no se puede deshacer.</string>
+    <string name="collection_view_all">Ver todo</string>
+    <string name="collection_rename">Cambiar nombre</string>
+    <string name="collection_detail_title">Colección</string>
+    <string name="collection_remove_item_title">Quitar elemento</string>
+    <string name="collection_remove_item_message">¿Quitar «%1$s» de esta colección? La colección permanecerá.</string>
+    <string name="collections_empty_title">Aún no hay colecciones</string>
+    <string name="collections_empty_subtitle">Crea tu primera colección para organizar tus películas y series favoritas</string>
+    <string name="collections_empty_create_button">Crear colección</string>
+    <string name="collection_detail_movies">Películas (%1$d)</string>
+    <string name="collection_detail_tv_series">Series de TV (%1$d)</string>
+    <string name="collection_detail_empty">Esta colección está vacía</string>
+    <string name="collection_watched">Visto</string>
+    <string name="collection_mark_watched">Marcar como visto</string>
+    <string name="collection_load_error">No se pudo cargar la colección</string>
+    <string name="collections_content_load_error">No se pudieron cargar algunas imágenes de las colecciones.</string>
+    <string name="collection_content_load_error">No se pudieron cargar algunos elementos de la colección.</string>
+    <string name="collections_saving">Guardando…</string>
+    <string name="collections_create_saved">Colección creada</string>
+    <string name="collections_edit_saved">Colección guardada</string>
+    <string name="collections_delete_saved">Colección eliminada</string>
+    <string name="collections_mutation_failed">No se pudieron guardar los cambios de la colección. Inténtalo de nuevo.</string>
+    <string name="collection_rename_saved">Nombre de la colección actualizado</string>
+    <string name="collection_remove_saved">Elemento eliminado</string>
+    <string name="collection_item_saved">Cambios del elemento guardados</string>
+    <string name="collection_mutation_failed">No se pudieron guardar los cambios. Inténtalo de nuevo.</string>
+</resources>

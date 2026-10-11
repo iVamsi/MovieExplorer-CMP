@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="collections_heading">My Collections</string>
+    <string name="collections_create_title">Create Collection</string>
+    <string name="collections_edit_title">Edit Collection</string>
+    <string name="collections_delete_title">Delete Collection</string>
+    <string name="collections_delete_message">Delete "%1$s"? This action cannot be undone.</string>
+    <string name="collection_view_all">View All</string>
+    <string name="collection_rename">Rename</string>
+    <string name="collection_detail_title">Collection</string>
+    <string name="collection_remove_item_title">Remove item</string>
+    <string name="collection_remove_item_message">Remove "%1$s" from this collection? The collection itself will stay.</string>
+    <string name="collections_empty_title">No Collections Yet</string>
+    <string name="collections_empty_subtitle">Create your first collection to organize your favorite movies and series</string>
+    <string name="collections_empty_create_button">Create Collection</string>
+    <string name="collection_detail_movies">Movies (%1$d)</string>
+    <string name="collection_detail_tv_series">TV Series (%1$d)</string>
+    <string name="collection_detail_empty">This collection is empty</string>
+    <string name="collection_watched">Watched</string>
+    <string name="collection_mark_watched">Mark watched</string>
+    <string name="collection_load_error">Failed to load collection</string>
+    <string name="collections_content_load_error">Some collection artwork couldn’t load.</string>
+    <string name="collection_content_load_error">Some collection items couldn’t load.</string>
+    <string name="collections_saving">Saving…</string>
+    <string name="collections_create_saved">Collection created</string>
+    <string name="collections_edit_saved">Collection saved</string>
+    <string name="collections_delete_saved">Collection deleted</string>
+    <string name="collections_mutation_failed">Couldn’t save collection changes. Try again.</string>
+    <string name="collection_rename_saved">Collection renamed</string>
+    <string name="collection_remove_saved">Item removed</string>
+    <string name="collection_item_saved">Item changes saved</string>
+    <string name="collection_mutation_failed">Couldn’t save changes. Try again.</string>
+</resources>

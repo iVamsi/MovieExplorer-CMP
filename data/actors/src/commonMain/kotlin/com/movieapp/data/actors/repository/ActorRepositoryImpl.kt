@@ -32,6 +32,7 @@ import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onStart
@@ -78,16 +79,10 @@ class ActorRepositoryImpl(
         }
 
     override fun getActorByIdFlow(actorId: Int): Flow<Result<Actor>> =
-        actorDao
-            .getActorByIdFlow(actorId)
-            .map<ActorEntity?, Result<Actor>> { entity ->
-                if (entity != null) {
-                    Result.Success(actorMapper.mapToDomain(entity))
-                } else {
-                    getActorById(actorId)
-                }
-            }
-            .onStart { emit(Result.Loading) }
+        flow {
+            emit(Result.Loading)
+            emit(getActorById(actorId))
+        }
             .catch { exception -> emit(Result.Error(exception)) }
             .flowOn(dispatchers.io)
 
