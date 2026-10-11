@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>NoUnusedImports:OfflineContentRepositoryImplTest.kt$com.movieapp.data.user.repository.OfflineContentRepositoryImplTest.kt</ID>
+    <ID>NoUnusedImports:UserRepositoryTest.kt$com.movieapp.data.user.repository.UserRepositoryTest.kt</ID>
+    <ID>NoWildcardImports:UserRepositoryImpl.kt$import com.movieapp.core.database.entity.*</ID>
+    <ID>WildcardImport:UserRepositoryImpl.kt$import com.movieapp.core.database.entity.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

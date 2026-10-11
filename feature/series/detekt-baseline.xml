@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>MultiLineIfElse:SeriesDetailScreen.kt$LazyRow( horizontalArrangement = Arrangement.spacedBy(MovieAppSpacing.itemGapCompact) ) { items(cast, key = { it.id }, contentType = { "cast" }) { member -&gt; SeriesCastChip( member = member, onClick = { onActorClick(member.id) }, ) } }</ID>
+    <ID>MultiLineIfElse:SeriesDetailScreen.kt$Text(stringResource(CoreRes.string.detail_cast_unavailable))</ID>
+    <ID>TooManyFunctions:SeriesDetailViewModelTest.kt$SeriesDetailViewModelTest</ID>
+    <ID>Wrapping:SeriesDetailScreen.kt$(</ID>
+    <ID>Wrapping:SeriesDetailViewModelTest.kt$SeriesDetailViewModelTest$(</ID>
+  </CurrentIssues>
+</SmellBaseline>

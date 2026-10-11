@@ -4,5 +4,18 @@
 <dict>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.movieapp.cmp</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>movieapp</string>
+			</array>
+		</dict>
+	</array>
+	<key>NSFaceIDUsageDescription</key>
+	<string>Unlock Movie Explorer with Face ID.</string>
 </dict>
 </plist>

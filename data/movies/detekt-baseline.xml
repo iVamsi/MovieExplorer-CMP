@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>CyclomaticComplexMethod:MovieMapper.kt$MovieMapper$fun mapToDomain(entity: MovieEntity): Movie</ID>
+    <ID>LongMethod:MovieMapper.kt$MovieMapper$fun mapToDomain(entity: MovieEntity): Movie</ID>
+    <ID>NoUnusedImports:MovieMapperTest.kt$com.movieapp.data.movies.mapper.MovieMapperTest.kt</ID>
+    <ID>NoUnusedImports:MovieRepositoryTest.kt$com.movieapp.data.movies.repository.MovieRepositoryTest.kt</ID>
+    <ID>NoWildcardImports:MovieMapper.kt$import com.movieapp.core.model.*</ID>
+    <ID>SwallowedException:MovieMapper.kt$MovieMapper$e: Exception</ID>
+    <ID>UnusedPrivateProperty:MovieRelatedPagingSource.kt$MovieRelatedPagingSource$private val apiService: TmdbApiService</ID>
+    <ID>WildcardImport:MovieMapper.kt$import com.movieapp.core.model.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

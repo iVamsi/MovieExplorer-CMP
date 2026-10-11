@@ -14,7 +14,7 @@
     <string name="help_faq_report_q">¿Cómo informo de un error o pido una función?</string>
     <string name="help_faq_report_a">Visita el repositorio de GitHub enlazado en Perfil → Ajustes → Acerca de. Abre un issue nuevo y describe el error o la función que te gustaría.</string>
 
-    <string name="about_app_name">MovieApp</string>
+    <string name="about_app_name">Movie Explorer</string>
     <string name="about_version_label">Versión %1$s</string>
     <string name="about_rate_app">Valorar la app</string>
     <string name="about_view_github">Ver en GitHub</string>
@@ -53,7 +53,7 @@
     <string name="account_biometric_lock_title">Exigir desbloqueo biométrico</string>
     <string name="account_biometric_lock_subtitle">Solicitar biometría al abrir la app o tras 30 segundos en segundo plano.</string>
     <string name="account_biometric_lock_unavailable">No hay biometría registrada en este dispositivo. Configúrala primero en los Ajustes del sistema.</string>
-    <string name="account_biometric_prompt_title">Desbloquear MovieApp</string>
+    <string name="account_biometric_prompt_title">Desbloquear Movie Explorer</string>
     <string name="account_biometric_prompt_subtitle">Confirma tu identidad para continuar.</string>
     <string name="account_biometric_prompt_cancel">Cancelar</string>
 

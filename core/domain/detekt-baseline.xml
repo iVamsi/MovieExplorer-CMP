@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>TooManyFunctions:MovieRepository.kt$MovieRepository</ID>
+    <ID>TooManyFunctions:SeriesRepository.kt$SeriesRepository</ID>
+    <ID>TooManyFunctions:UserRepository.kt$UserRepository</ID>
+  </CurrentIssues>
+</SmellBaseline>

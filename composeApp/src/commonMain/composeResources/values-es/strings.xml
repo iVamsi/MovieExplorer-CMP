@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Movie Explorer</string>
+    <string name="nav_home">Descubrir</string>
+    <string name="nav_movies">Películas</string>
+    <string name="nav_series">Series</string>
+    <string name="nav_actors">Actores</string>
+    <string name="nav_search">Buscar</string>
+    <string name="nav_collections">Colecciones</string>
+    <string name="nav_library">Biblioteca</string>
+    <string name="library_tab_collections">Colecciones</string>
+    <string name="library_tab_watchlist">Lista de seguimiento</string>
+    <string name="library_tab_favorites">Favoritos</string>
+    <string name="nav_favorites">Favoritos</string>
+    <string name="nav_profile">Perfil</string>
+    <string name="loading">Cargando…</string>
+    <string name="error">Error</string>
+    <string name="retry">Reintentar</string>
+    <string name="no_data">No hay datos disponibles</string>
+    <string name="popular_movies">Películas populares</string>
+    <string name="top_rated_movies">Películas mejor valoradas</string>
+    <string name="now_playing">En cartelera</string>
+    <string name="upcoming">Próximamente</string>
+    <string name="popular_series">Series populares</string>
+    <string name="top_rated_series">Series mejor valoradas</string>
+    <string name="on_the_air">En emisión</string>
+    <string name="airing_today">Emitiéndose hoy</string>
+    <string name="search_hint">Busca películas, series, actores…</string>
+    <string name="search_results">Resultados de búsqueda</string>
+    <string name="my_collections">Mis colecciones</string>
+    <string name="watchlist">Lista de seguimiento</string>
+    <string name="favorites">Favoritos</string>
+    <string name="favorites_select_hint">Selecciona un favorito para ver sus detalles</string>
+    <string name="search_select_hint">Busca para ver los resultados a la derecha</string>
+    <string name="library_select_hint">Selecciona un elemento de tu biblioteca</string>
+    <string name="create_collection">Crear colección</string>
+    <string name="overview">Sinopsis</string>
+    <string name="cast">Reparto</string>
+    <string name="crew">Equipo</string>
+    <string name="similar">Similares</string>
+    <string name="recommendations">Recomendaciones</string>
+    <string name="reviews">Reseñas</string>
+    <string name="add_to_watchlist">Añadir a la lista</string>
+    <string name="remove_from_watchlist">Quitar de la lista</string>
+    <string name="add_to_favorites">Añadir a favoritos</string>
+    <string name="remove_from_favorites">Quitar de favoritos</string>
+    <string name="rate">Valorar</string>
+    <string name="share">Compartir</string>
+    <string name="gallery_title">Fotos</string>
+    <string name="gallery_no_stills">No hay imágenes disponibles</string>
+    <string name="gallery_loading_artwork">Cargando imagen…</string>
+    <string name="gallery_missing_artwork">La imagen no está disponible</string>
+    <string name="cd_gallery_still">Imagen de la galería</string>
+    <string name="gallery_position">%1$d / %2$d</string>
+    <string name="gallery_gesture_hint">Desliza para explorar. Pellizca para ampliar.</string>
+
+    <string name="auth_login_success">Sesión iniciada con TMDB</string>
+    <string name="auth_login_error">No se pudo completar el inicio de sesión. Inténtalo de nuevo.</string>
+    <string name="auth_login_denied">Inicio de sesión no aprobado</string>
+
+    <string name="biometric_prompt_title">Desbloquear Movie Explorer</string>
+    <string name="biometric_prompt_subtitle">Confirma tu identidad para continuar.</string>
+    <string name="biometric_prompt_cancel">Cancelar</string>
+    <string name="biometric_recovery_title">Bloqueo de la app no disponible</string>
+    <string name="biometric_recovery_message">Usa la credencial del dispositivo, reintenta la autenticación o desactiva el bloqueo de la app para continuar.</string>
+    <string name="biometric_recovery_retry">Reintentar</string>
+    <string name="biometric_recovery_disable">Desactivar bloqueo</string>
+
+    <string name="shortcut_search_short">Buscar</string>
+    <string name="shortcut_search_long">Buscar películas y series</string>
+    <string name="shortcut_library_short">Biblioteca</string>
+    <string name="shortcut_library_long">Abrir lista y colecciones</string>
+    <string name="shortcut_upcoming_short">Próximos</string>
+    <string name="shortcut_upcoming_long">Calendario de próximos estrenos</string>
+</resources>
+

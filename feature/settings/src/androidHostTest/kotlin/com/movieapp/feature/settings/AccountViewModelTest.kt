@@ -5,6 +5,7 @@ import com.google.common.truth.Truth.assertThat
 import com.movieapp.core.common.Result
 import com.movieapp.core.common.preferences.PreferencesRepository
 import com.movieapp.core.domain.repository.AuthRepository
+import com.movieapp.core.ui.security.BiometricAuthenticator
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.mockk
@@ -25,6 +26,7 @@ class AccountViewModelTest {
     private val testDispatcher = UnconfinedTestDispatcher()
     private val authRepository = mockk<AuthRepository>(relaxed = true)
     private val preferencesRepository = mockk<PreferencesRepository>(relaxed = true)
+    private val biometricAuthenticator = mockk<BiometricAuthenticator>(relaxed = true)
 
     @Before
     fun setup() {
@@ -37,7 +39,14 @@ class AccountViewModelTest {
     }
 
     private fun createViewModel() =
-        AccountViewModel(authRepository, preferencesRepository)
+        AccountViewModel(authRepository, preferencesRepository, biometricAuthenticator)
+
+    @Test
+    fun `biometricAvailable - exposes authenticator capability`() {
+        io.mockk.every { biometricAuthenticator.isAvailable() } returns true
+
+        assertThat(createViewModel().biometricAvailable).isTrue()
+    }
 
     @Test
     fun `setBiometricLockEnabled - persists flag via preferences`() = runTest {

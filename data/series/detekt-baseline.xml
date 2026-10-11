@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>CyclomaticComplexMethod:TvSeriesMapper.kt$TvSeriesMapper$fun mapToDomain(entity: TvSeriesEntity): TvSeries</ID>
+    <ID>LongMethod:TvSeriesMapper.kt$TvSeriesMapper$fun mapToDomain(entity: TvSeriesEntity): TvSeries</ID>
+    <ID>NoUnusedImports:SeriesRepositoryTest.kt$com.movieapp.data.series.repository.SeriesRepositoryTest.kt</ID>
+    <ID>NoUnusedImports:TvSeriesMapperTest.kt$com.movieapp.data.series.mapper.TvSeriesMapperTest.kt</ID>
+    <ID>NoWildcardImports:TvSeriesMapper.kt$import com.movieapp.core.model.*</ID>
+    <ID>SwallowedException:TvSeriesMapper.kt$TvSeriesMapper$e: Exception</ID>
+    <ID>WildcardImport:TvSeriesMapper.kt$import com.movieapp.core.model.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

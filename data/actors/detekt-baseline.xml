@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>ArgumentListWrapping:ActorRepositoryImpl.kt$ActorRepositoryImpl$(apiService, transactionRunner, remoteKeysDao, actorDao, actorMapper)</ID>
+    <ID>LoopWithTooManyJumpStatements:ActorRepositoryImpl.kt$ActorRepositoryImpl$while</ID>
+    <ID>NoUnusedImports:ActorMapperTest.kt$com.movieapp.data.actors.mapper.ActorMapperTest.kt</ID>
+    <ID>NoUnusedImports:ActorRepositoryTest.kt$com.movieapp.data.actors.repository.ActorRepositoryTest.kt</ID>
+    <ID>NoWildcardImports:ActorMapper.kt$import com.movieapp.core.model.*</ID>
+    <ID>SwallowedException:ActorMapper.kt$ActorMapper$e: Exception</ID>
+    <ID>WildcardImport:ActorMapper.kt$import com.movieapp.core.model.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

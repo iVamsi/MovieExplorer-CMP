@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>MultiLineIfElse:DetailScreenComponents.kt$Res.string.cd_add_favorite</ID>
+    <ID>MultiLineIfElse:DetailScreenComponents.kt$Res.string.cd_add_watchlist</ID>
+    <ID>MultiLineIfElse:DetailScreenComponents.kt$Res.string.cd_remove_favorite</ID>
+    <ID>MultiLineIfElse:DetailScreenComponents.kt$Res.string.cd_remove_watchlist</ID>
+    <ID>MultiLineIfElse:DetailScreenComponents.kt$Res.string.detail_in_watchlist</ID>
+    <ID>MultiLineIfElse:DetailScreenComponents.kt$Res.string.label_watchlist</ID>
+    <ID>MultiLineIfElse:MovieCard.kt$Constants.ImageSize.BACKDROP_MEDIUM</ID>
+    <ID>MultiLineIfElse:MovieCard.kt$Constants.ImageSize.POSTER_MEDIUM</ID>
+    <ID>MultiLineIfElse:SeriesCard.kt$Constants.ImageSize.BACKDROP_MEDIUM</ID>
+    <ID>MultiLineIfElse:SeriesCard.kt$Constants.ImageSize.POSTER_MEDIUM</ID>
+    <ID>SpacingBetweenDeclarationsWithComments:MovieAppSpacing.kt$MovieAppSpacing$/** Actor profile header behind the glass card on actor detail. */</ID>
+    <ID>SpacingBetweenDeclarationsWithComments:MovieAppSpacing.kt$MovieAppSpacing$/** Horizontal gap between poster cards in home rows, detail carousels, etc. */</ID>
+    <ID>SpacingBetweenDeclarationsWithComments:MovieAppSpacing.kt$MovieAppSpacing$/** Shimmer placeholder height under the main media hero on detail screens. */</ID>
+    <ID>SwallowedException:Extensions.kt$e: Exception</ID>
+    <ID>TopLevelPropertyNaming:MovieAppHeroScrim.kt$/** * Hero/backdrop scrims for media imagery. * * - [heroDetailBackdropScrimBrush]: Movie &amp; TV detail backdrop behind the glass info card. * - [heroScrimBrush]: Theme-colored bottom-weighted fade (e.g. actor hero behind glass card). */ private const val DetailHeroGradientStartY = 280f</ID>
+    <ID>Wrapping:Platform.android.kt${ text -&gt; val send = Intent(Intent.ACTION_SEND).apply { type = "text/plain" putExtra(Intent.EXTRA_TEXT, text) } context.startActivity(Intent.createChooser(send, null)) }</ID>
+    <ID>Wrapping:Platform.ios.kt${ text -&gt; val controller = UIActivityViewController(activityItems = listOf(text), applicationActivities = null) UIApplication.sharedApplication.keyWindow?.rootViewController ?.presentViewController(controller, animated = true, completion = null) }</ID>
+  </CurrentIssues>
+</SmellBaseline>

@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>ArgumentListWrapping:ActorDetailScreen.kt$(CoreRes.string.actor_born_on, birthday.toLocalDateOrNull()?.formatShort(monthNames) ?: birthday)</ID>
+    <ID>ArgumentListWrapping:ActorDetailScreen.kt$(CoreRes.string.actor_died_on, deathday.toLocalDateOrNull()?.formatShort(monthNames) ?: deathday)</ID>
+    <ID>MultiLineIfElse:ActorDetailScreen.kt$CoreRes.string.cd_add_favorite</ID>
+    <ID>MultiLineIfElse:ActorDetailScreen.kt$CoreRes.string.cd_remove_favorite</ID>
+    <ID>MultiLineIfElse:ActorDetailScreen.kt$CoreRes.string.detail_favorite</ID>
+    <ID>MultiLineIfElse:ActorDetailScreen.kt$CoreRes.string.detail_favorited</ID>
+  </CurrentIssues>
+</SmellBaseline>

@@ -22,6 +22,13 @@ The build reads these values and generates `AppConfig` for both platforms. The k
 
 This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.
 
+## Quality checks
+
+```bash
+./gradlew detekt testAndroidHostTest iosSimulatorArm64Test koverVerify
+./gradlew :androidApp:assembleDebug :androidApp:assembleRelease
+```
+
 ## License
 
 [MIT](LICENSE)
