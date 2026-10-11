@@ -20,6 +20,13 @@ The build reads these values and generates `AppConfig` for both platforms. The k
 - **Android:** `./gradlew :androidApp:installDebug` with an emulator or device connected (min SDK 24).
 - **iOS:** open `iosApp/iosApp.xcodeproj` in Xcode, pick an iPhone simulator, and press Run. Xcode builds the Kotlin framework through Gradle.
 
+## Known issues
+
+Carried over unchanged from the Android app so both behave the same:
+
+- The non-paged movie rows fall back to any fresh cached movie, not only movies from the same category.
+- The paged `RemoteMediator`s ignore the user's language and region settings.
+
 ## Attribution
 
 This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.
