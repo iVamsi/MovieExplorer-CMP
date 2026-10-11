@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="profile_demo_display_name">Movie Explorer</string>
+    <string name="profile_demo_email">user@example.com</string>
+    <string name="profile_signed_out_title">Perfil local</string>
+    <string name="profile_signed_out_subtitle">Tus favoritos y la lista de seguimiento se guardan en este dispositivo. Inicia sesión para sincronizar con TMDB.</string>
+    <string name="profile_signed_in_subtitle">Sesión iniciada en TMDB. El acceso a la biblioteca local sigue disponible.</string>
+    <string name="profile_sign_in_tmdb">Iniciar sesión con TMDB</string>
+    <string name="profile_error_login_url">No se pudo iniciar el inicio de sesión. Comprueba la red y la clave API.</string>
+    <string name="profile_stats_title">Tus estadísticas</string>
+    <string name="profile_stats_basis">Basado en tus calificaciones, favoritos y elementos vistos en colecciones.</string>
+    <string name="profile_stats_empty">Las estadísticas aparecen después de calificar, marcar favoritos o marcar elementos de colección como vistos.</string>
+    <string name="profile_stats_watch_time">Tiempo visto</string>
+    <string name="profile_stats_genres">Géneros</string>
+    <string name="profile_stats_decades">Décadas</string>
+    <string name="profile_stats_ratings">Calificaciones</string>
+    <string name="profile_stats_top_people">Personas destacadas</string>
+    <string name="profile_stats_person_count">%1$s - %2$d</string>
+    <string name="profile_watch_time_hours_minutes">%1$d h %2$d min</string>
+    <string name="profile_watch_time_hours">%1$d h</string>
+    <string name="profile_watch_time_minutes">%1$d min</string>
+    <plurals name="profile_rating_star">
+        <item quantity="one">%1$d estrella</item>
+        <item quantity="other">%1$d estrellas</item>
+    </plurals>
+</resources>
