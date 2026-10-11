@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Movie Explorer</string>
+    <string name="shortcut_search_short">Buscar</string>
+    <string name="shortcut_search_long">Buscar películas y series</string>
+    <string name="shortcut_library_short">Biblioteca</string>
+    <string name="shortcut_library_long">Abrir tu biblioteca</string>
+    <string name="shortcut_upcoming_short">Próximos</string>
+    <string name="shortcut_upcoming_long">Abrir el calendario de estrenos</string>
+</resources>

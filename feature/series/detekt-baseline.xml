@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>FunctionNaming:SeriesDetailViewModelTest.kt$SeriesDetailViewModelTest$@Test fun `checkUserStatus - maps stored rating out of ten to stars out of five`()</ID>
+    <ID>FunctionNaming:SeriesDetailViewModelTest.kt$SeriesDetailViewModelTest$@Test fun `checkUserStatus - when series is in watchlist but not favorite - state reflects correctly`()</ID>
+    <ID>FunctionNaming:SeriesDetailViewModelTest.kt$SeriesDetailViewModelTest$@Test fun `loadSeriesDetails - when flow fails but remote lookup succeeds - shows cached series`()</ID>
+    <ID>FunctionNaming:SeriesDetailViewModelTest.kt$SeriesDetailViewModelTest$@Test fun `loadSeriesDetails - when flow returns error - state shows error`()</ID>
+    <ID>FunctionNaming:SeriesDetailViewModelTest.kt$SeriesDetailViewModelTest$@Test fun `loadSeriesDetails - when flow returns success - state shows series`()</ID>
+    <ID>FunctionNaming:SeriesDetailViewModelTest.kt$SeriesDetailViewModelTest$@Test fun `loadWatchProviders - merges flatrate rent and buy for region without duplicates`()</ID>
+    <ID>FunctionNaming:SeriesDetailViewModelTest.kt$SeriesDetailViewModelTest$@Test fun `loadWatchProviders - selected region absent - does not show foreign providers`()</ID>
+    <ID>FunctionNaming:SeriesDetailViewModelTest.kt$SeriesDetailViewModelTest$@Test fun `onEvent ClearUserRating - resets stars and calls use case`()</ID>
+    <ID>FunctionNaming:SeriesDetailViewModelTest.kt$SeriesDetailViewModelTest$@Test fun `onEvent Retry - reloads series details`()</ID>
+    <ID>FunctionNaming:SeriesDetailViewModelTest.kt$SeriesDetailViewModelTest$@Test fun `onEvent SaveForOffline - when already saved offline - does not prefetch again`()</ID>
+    <ID>FunctionNaming:SeriesDetailViewModelTest.kt$SeriesDetailViewModelTest$@Test fun `onEvent SaveForOffline - when prefetch fails - emits ShowMessage and clears flag`()</ID>
+    <ID>FunctionNaming:SeriesDetailViewModelTest.kt$SeriesDetailViewModelTest$@Test fun `onEvent SaveForOffline - when series is not saved - prefetches series and marks saved`()</ID>
+    <ID>FunctionNaming:SeriesDetailViewModelTest.kt$SeriesDetailViewModelTest$@Test fun `onEvent SetUserRating - when use case fails - emits ShowMessage and keeps stars`()</ID>
+    <ID>FunctionNaming:SeriesDetailViewModelTest.kt$SeriesDetailViewModelTest$@Test fun `onEvent SetUserRating - when use case succeeds - updates stars`()</ID>
+    <ID>FunctionNaming:SeriesDetailViewModelTest.kt$SeriesDetailViewModelTest$@Test fun `onEvent ToggleFavorite - when is favorite - calls removeFromFavorites and flips flag`()</ID>
+    <ID>FunctionNaming:SeriesDetailViewModelTest.kt$SeriesDetailViewModelTest$@Test fun `onEvent ToggleFavorite - when not favorite - calls addToFavorites and flips flag`()</ID>
+    <ID>FunctionNaming:SeriesDetailViewModelTest.kt$SeriesDetailViewModelTest$@Test fun `onEvent ToggleFavorite - when save fails - emits typed failure`()</ID>
+    <ID>FunctionNaming:SeriesDetailViewModelTest.kt$SeriesDetailViewModelTest$@Test fun `onEvent ToggleWatchlist - when not watchlisted - calls addToWatchlist and flips flag`()</ID>
+    <ID>FunctionNaming:SeriesDetailViewModelTest.kt$SeriesDetailViewModelTest$@Test fun `onEvent ToggleWatchlist - when save fails - keeps state and reports failure`()</ID>
+    <ID>MultiLineIfElse:SeriesDetailScreen.kt$LazyRow( horizontalArrangement = Arrangement.spacedBy(MovieAppSpacing.itemGapCompact) ) { items(cast, key = { it.id }, contentType = { "cast" }) { member -&gt; SeriesCastChip( member = member, onClick = { onActorClick(member.id) }, ) } }</ID>
+    <ID>MultiLineIfElse:SeriesDetailScreen.kt$Text(stringResource(CoreRes.string.detail_cast_unavailable))</ID>
+    <ID>TooManyFunctions:SeriesDetailViewModelTest.kt$SeriesDetailViewModelTest</ID>
+    <ID>Wrapping:SeriesDetailScreen.kt$(</ID>
+    <ID>Wrapping:SeriesDetailViewModelTest.kt$SeriesDetailViewModelTest$(</ID>
+  </CurrentIssues>
+</SmellBaseline>

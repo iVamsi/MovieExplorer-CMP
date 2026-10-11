@@ -14,7 +14,7 @@
     <string name="help_faq_report_q">How do I report a bug or request a feature?</string>
     <string name="help_faq_report_a">Visit the GitHub repository linked in Profile → Settings → About. Open a new issue and describe the bug or feature you would like to see.</string>
 
-    <string name="about_app_name">MovieApp</string>
+    <string name="about_app_name">Movie Explorer</string>
     <string name="about_version_label">Version %1$s</string>
     <string name="about_rate_app">Rate the App</string>
     <string name="about_view_github">View on GitHub</string>
@@ -53,7 +53,7 @@
     <string name="account_biometric_lock_title">Require biometric unlock</string>
     <string name="account_biometric_lock_subtitle">Ask for biometrics when opening the app or resuming after 30 seconds.</string>
     <string name="account_biometric_lock_unavailable">No biometrics enrolled on this device. Set one up in system Settings first.</string>
-    <string name="account_biometric_prompt_title">Unlock MovieApp</string>
+    <string name="account_biometric_prompt_title">Unlock Movie Explorer</string>
     <string name="account_biometric_prompt_subtitle">Confirm it's you to continue.</string>
     <string name="account_biometric_prompt_cancel">Cancel</string>
 

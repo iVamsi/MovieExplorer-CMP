@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>ArgumentListWrapping:ActorDetailScreen.kt$(CoreRes.string.actor_born_on, birthday.toLocalDateOrNull()?.formatShort(monthNames) ?: birthday)</ID>
+    <ID>ArgumentListWrapping:ActorDetailScreen.kt$(CoreRes.string.actor_died_on, deathday.toLocalDateOrNull()?.formatShort(monthNames) ?: deathday)</ID>
+    <ID>FunctionNaming:ActorDetailViewModelTest.kt$ActorDetailViewModelTest$@Test fun `loadActorDetails - when actor flow emits error - state shows error`()</ID>
+    <ID>FunctionNaming:ActorDetailViewModelTest.kt$ActorDetailViewModelTest$@Test fun `loadActorDetails - when actor flow emits success - state shows actor`()</ID>
+    <ID>FunctionNaming:ActorDetailViewModelTest.kt$ActorDetailViewModelTest$@Test fun `loadActorDetails - when credits fail - credits remain empty`()</ID>
+    <ID>FunctionNaming:ActorDetailViewModelTest.kt$ActorDetailViewModelTest$@Test fun `loadActorDetails - when credits succeed - state contains movie and tv credits`()</ID>
+    <ID>FunctionNaming:ActorDetailViewModelTest.kt$ActorDetailViewModelTest$@Test fun `onEvent Retry - reloads all actor data`()</ID>
+    <ID>FunctionNaming:ActorDetailViewModelTest.kt$ActorDetailViewModelTest$@Test fun `onEvent ToggleFavorite - when save fails - keeps state and reports failure`()</ID>
+    <ID>FunctionNaming:ActorDetailViewModelTest.kt$ActorDetailViewModelTest$@Test fun `onEvent ToggleFavorite - when save succeeds - emits typed update`()</ID>
+    <ID>MultiLineIfElse:ActorDetailScreen.kt$CoreRes.string.cd_add_favorite</ID>
+    <ID>MultiLineIfElse:ActorDetailScreen.kt$CoreRes.string.cd_remove_favorite</ID>
+    <ID>MultiLineIfElse:ActorDetailScreen.kt$CoreRes.string.detail_favorite</ID>
+    <ID>MultiLineIfElse:ActorDetailScreen.kt$CoreRes.string.detail_favorited</ID>
+  </CurrentIssues>
+</SmellBaseline>

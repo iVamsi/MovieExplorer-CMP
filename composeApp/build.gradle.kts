@@ -65,8 +65,14 @@ kotlin {
             implementation(lib("compose-material3-adaptive-navigation"))
             implementation(lib("coil-network-ktor3"))
         }
+        commonTest.dependencies {
+            implementation(project(":core:testing"))
+            implementation(lib("datastore-preferences"))
+            implementation(lib("kotlinx-coroutines-test"))
+        }
         commonMain { kotlin.srcDir(generateAppConfig) }
         androidMain.dependencies {
+            implementation(lib("androidx-appcompat"))
             implementation(lib("koin-android"))
         }
     }

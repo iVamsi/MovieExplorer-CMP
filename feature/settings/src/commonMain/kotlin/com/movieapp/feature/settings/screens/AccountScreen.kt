@@ -8,6 +8,9 @@ import com.movieapp.feature.settings.resources.account_signed_out_body
 import com.movieapp.feature.settings.resources.account_signed_out_title
 import com.movieapp.feature.settings.resources.account_sync_summary
 import com.movieapp.feature.settings.resources.account_username_label
+import com.movieapp.feature.settings.resources.account_biometric_lock_subtitle
+import com.movieapp.feature.settings.resources.account_biometric_lock_title
+import com.movieapp.feature.settings.resources.account_biometric_lock_unavailable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -21,12 +24,14 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.ListItem
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
+import androidx.compose.material3.Switch
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -48,6 +53,8 @@ import com.movieapp.feature.settings.AccountViewModel
 fun AccountScreen(onBackClick: () -> Unit, viewModel: AccountViewModel = koinViewModel()) {
     val authState by
         viewModel.authState.collectAsStateWithLifecycle(initialValue = AuthState.SignedOut)
+    val biometricLockEnabled by
+        viewModel.biometricLockEnabled.collectAsStateWithLifecycle(initialValue = false)
     val snackbarHostState = remember { SnackbarHostState() }
     val uriHandler = LocalUriHandler.current
 
@@ -124,6 +131,30 @@ fun AccountScreen(onBackClick: () -> Unit, viewModel: AccountViewModel = koinVie
                 text = stringResource(Res.string.account_sync_summary),
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+
+            ListItem(
+                headlineContent = {
+                    Text(stringResource(Res.string.account_biometric_lock_title))
+                },
+                supportingContent = {
+                    Text(
+                        stringResource(
+                            if (viewModel.biometricAvailable) {
+                                Res.string.account_biometric_lock_subtitle
+                            } else {
+                                Res.string.account_biometric_lock_unavailable
+                            }
+                        )
+                    )
+                },
+                trailingContent = {
+                    Switch(
+                        checked = biometricLockEnabled,
+                        onCheckedChange = viewModel::setBiometricLockEnabled,
+                        enabled = viewModel.biometricAvailable,
+                    )
+                },
             )
 
             TmdbAttributionSection(modifier = Modifier.fillMaxWidth())

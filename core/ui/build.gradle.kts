@@ -8,6 +8,7 @@ kotlin {
             implementation(lib("paging-compose"))
         }
         androidMain.dependencies {
+            implementation(lib("androidx-biometric"))
             implementation(lib("koin-android"))
         }
     }
