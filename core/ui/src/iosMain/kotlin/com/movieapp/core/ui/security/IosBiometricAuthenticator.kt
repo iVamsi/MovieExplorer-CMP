@@ -12,8 +12,9 @@ class IosBiometricAuthenticator : BiometricAuthenticator {
     override fun isAvailable(): Boolean =
         LAContext().canEvaluatePolicy(LAPolicyDeviceOwnerAuthentication, error = null)
 
-    override suspend fun authenticate(title: String, subtitle: String): AppLockAuthResult =
-        suspendCancellableCoroutine { continuation ->
+    override suspend fun authenticate(title: String, subtitle: String): AppLockAuthResult {
+        if (!isAvailable()) return AppLockAuthResult.Unavailable
+        return suspendCancellableCoroutine { continuation ->
             LAContext().evaluatePolicy(
                 policy = LAPolicyDeviceOwnerAuthentication,
                 localizedReason = subtitle,
@@ -28,4 +29,5 @@ class IosBiometricAuthenticator : BiometricAuthenticator {
                 )
             }
         }
+    }
 }

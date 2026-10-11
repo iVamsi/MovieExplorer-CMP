@@ -1,4 +1,4 @@
-# ADR-0005: Compose Multiplatform shared UI
+# ADR-0004: Compose Multiplatform shared UI
 
 **Status:** Accepted
 

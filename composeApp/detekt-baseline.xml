@@ -2,9 +2,6 @@
 <SmellBaseline>
   <ManuallySuppressedIssues/>
   <CurrentIssues>
-    <ID>FunctionNaming:AppViewModelTest.kt$AppViewModelTest$@Test fun `deep link - approved callback - completes login and reports success`()</ID>
-    <ID>FunctionNaming:AppViewModelTest.kt$AppViewModelTest$@Test fun `deep link - denied callback - does not complete login`()</ID>
-    <ID>FunctionNaming:AppViewModelTest.kt$AppViewModelTest$@Test fun `foreground - lock enabled - authenticates and unlocks`()</ID>
     <ID>MatchingDeclarationName:MediaListDetailPane.kt$MediaDetailOpener</ID>
     <ID>MultiLineIfElse:ImageGalleryScreen.kt$ArtworkLoadState.Loading</ID>
     <ID>MultiLineIfElse:ImageGalleryScreen.kt$ArtworkLoadState.Unavailable</ID>

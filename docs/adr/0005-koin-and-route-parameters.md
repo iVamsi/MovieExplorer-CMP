@@ -1,4 +1,4 @@
-# ADR-0006: Koin and route parameters
+# ADR-0005: Koin and route parameters
 
 **Status:** Accepted
 

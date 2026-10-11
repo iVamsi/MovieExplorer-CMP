@@ -2,32 +2,6 @@
 <SmellBaseline>
   <ManuallySuppressedIssues/>
   <CurrentIssues>
-    <ID>FunctionNaming:ArchitectureTest.kt$ArchitectureTest$@Test fun `common source must not import JVM or platform APIs`()</ID>
-    <ID>FunctionNaming:ArchitectureTest.kt$ArchitectureTest$@Test fun `core domain must not depend on platform APIs`()</ID>
-    <ID>FunctionNaming:ArchitectureTest.kt$ArchitectureTest$@Test fun `feature modules must not import data implementations`()</ID>
-    <ID>FunctionNaming:ArchitectureTest.kt$ArchitectureTest$@Test fun `feature modules must not import data layer types`()</ID>
-    <ID>FunctionNaming:ArchitectureTest.kt$ArchitectureTest$@Test fun `repository interfaces live in core domain`()</ID>
-    <ID>FunctionNaming:ClearUserContentRatingUseCaseTest.kt$ClearUserContentRatingUseCaseTest$@Test fun `invoke - delegates to repository removeRating for movie`()</ID>
-    <ID>FunctionNaming:ClearUserContentRatingUseCaseTest.kt$ClearUserContentRatingUseCaseTest$@Test fun `invoke - propagates error from repository`()</ID>
-    <ID>FunctionNaming:GetFavoriteMoviesUseCaseTest.kt$GetFavoriteMoviesUseCaseTest$@Test fun `invoke - emits error when repository fails`()</ID>
-    <ID>FunctionNaming:GetFavoriteMoviesUseCaseTest.kt$GetFavoriteMoviesUseCaseTest$@Test fun `invoke - emits success list from repository`()</ID>
-    <ID>FunctionNaming:GetFavoriteTvSeriesUseCaseTest.kt$GetFavoriteTvSeriesUseCaseTest$@Test fun `invoke - emits error when repository fails`()</ID>
-    <ID>FunctionNaming:GetFavoriteTvSeriesUseCaseTest.kt$GetFavoriteTvSeriesUseCaseTest$@Test fun `invoke - emits success list from repository`()</ID>
-    <ID>FunctionNaming:GetUserRatingForContentUseCaseTest.kt$GetUserRatingForContentUseCaseTest$@Test fun `invoke - returns null when repository has no rating`()</ID>
-    <ID>FunctionNaming:GetUserRatingForContentUseCaseTest.kt$GetUserRatingForContentUseCaseTest$@Test fun `invoke - returns rating from repository`()</ID>
-    <ID>FunctionNaming:GetUserWatchStatsUseCaseTest.kt$GetUserWatchStatsUseCaseTest$@Test fun `invoke - emits error when repository fails`()</ID>
-    <ID>FunctionNaming:GetUserWatchStatsUseCaseTest.kt$GetUserWatchStatsUseCaseTest$@Test fun `invoke - emits stats from repository`()</ID>
-    <ID>FunctionNaming:PrefetchContentForOfflineUseCaseTest.kt$PrefetchContentForOfflineUseCaseTest$@Test fun `invoke - delegates prefetch to repository`()</ID>
-    <ID>FunctionNaming:SetUserContentRatingUseCaseTest.kt$SetUserContentRatingUseCaseTest$@Test fun `invoke - defaults notes to null when omitted`()</ID>
-    <ID>FunctionNaming:SetUserContentRatingUseCaseTest.kt$SetUserContentRatingUseCaseTest$@Test fun `invoke - forwards contentId contentType rating and notes to rateContent`()</ID>
-    <ID>FunctionNaming:ToggleFavoriteActorUseCaseTest.kt$ToggleFavoriteActorUseCaseTest$@Test fun `invoke - when currently favorite - calls removeFromFavorites with ACTOR`()</ID>
-    <ID>FunctionNaming:ToggleFavoriteActorUseCaseTest.kt$ToggleFavoriteActorUseCaseTest$@Test fun `invoke - when not currently favorite - calls addToFavorites with ACTOR`()</ID>
-    <ID>FunctionNaming:ToggleFavoriteMovieUseCaseTest.kt$ToggleFavoriteMovieUseCaseTest$@Test fun `invoke - always uses ContentType MOVIE`()</ID>
-    <ID>FunctionNaming:ToggleFavoriteMovieUseCaseTest.kt$ToggleFavoriteMovieUseCaseTest$@Test fun `invoke - when currently favorite - calls removeFromFavorites`()</ID>
-    <ID>FunctionNaming:ToggleFavoriteMovieUseCaseTest.kt$ToggleFavoriteMovieUseCaseTest$@Test fun `invoke - when not currently favorite - calls addToFavorites`()</ID>
-    <ID>FunctionNaming:ToggleWatchlistMovieUseCaseTest.kt$ToggleWatchlistMovieUseCaseTest$@Test fun `invoke - always uses ContentType MOVIE`()</ID>
-    <ID>FunctionNaming:ToggleWatchlistMovieUseCaseTest.kt$ToggleWatchlistMovieUseCaseTest$@Test fun `invoke - when currently watchlisted - calls removeFromWatchlist`()</ID>
-    <ID>FunctionNaming:ToggleWatchlistMovieUseCaseTest.kt$ToggleWatchlistMovieUseCaseTest$@Test fun `invoke - when not currently watchlisted - calls addToWatchlist`()</ID>
     <ID>TooManyFunctions:MovieRepository.kt$MovieRepository</ID>
     <ID>TooManyFunctions:SeriesRepository.kt$SeriesRepository</ID>
     <ID>TooManyFunctions:UserRepository.kt$UserRepository</ID>

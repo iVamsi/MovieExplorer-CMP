@@ -3,21 +3,5 @@
   <ManuallySuppressedIssues/>
   <CurrentIssues>
     <ID>CyclomaticComplexMethod:TmdbLocaleMapper.kt$TmdbLocaleMapper$fun fromAppLanguageCode(appLanguageCode: String): String</ID>
-    <ID>FunctionNaming:AppearancePreferencesTest.kt$AppearancePreferencesTest$@Test fun `appearance - existing dark choice - wallpaper colors remain opt in`()</ID>
-    <ID>FunctionNaming:AppearancePreferencesTest.kt$AppearancePreferencesTest$@Test fun `setUseWallpaperColors - toggled - persists independently of theme mode`()</ID>
-    <ID>FunctionNaming:SafeCallsTest.kt$SafeCallsTest$@Test fun `safeCall - block succeeds - returns Success with value`()</ID>
-    <ID>FunctionNaming:SafeCallsTest.kt$SafeCallsTest$@Test fun `safeCall - block throws - returns Error with exception`()</ID>
-    <ID>FunctionNaming:SafeCallsTest.kt$SafeCallsTest$@Test fun `safeCall - block throws CancellationException - rethrows`()</ID>
-    <ID>FunctionNaming:SafeCallsTest.kt$SafeCallsTest$@Test fun `safeCall - coroutine cancelled inside block - cancellation propagates`()</ID>
-    <ID>FunctionNaming:SafeCallsTest.kt$SafeCallsTest$@Test fun `safeResultFlow - fallback also throws - emits Error with original exception`()</ID>
-    <ID>FunctionNaming:SafeCallsTest.kt$SafeCallsTest$@Test fun `safeResultFlow - fallback receives original exception`()</ID>
-    <ID>FunctionNaming:SafeCallsTest.kt$SafeCallsTest$@Test fun `safeResultFlow - fetch fails with fallback value - emits Success with fallback`()</ID>
-    <ID>FunctionNaming:SafeCallsTest.kt$SafeCallsTest$@Test fun `safeResultFlow - fetch fails without fallback - emits Loading then Error`()</ID>
-    <ID>FunctionNaming:SafeCallsTest.kt$SafeCallsTest$@Test fun `safeResultFlow - fetch succeeds - emits Loading then Success`()</ID>
-    <ID>FunctionNaming:SafeCallsTest.kt$SafeCallsTest$@Test fun `safeResultFlow - fetch throws CancellationException - flow is cancelled not Error`()</ID>
-    <ID>FunctionNaming:TmdbLocaleMapperTest.kt$TmdbLocaleMapperTest$@Test fun `fromAppLanguageCode - blank falls back`()</ID>
-    <ID>FunctionNaming:TmdbLocaleMapperTest.kt$TmdbLocaleMapperTest$@Test fun `fromAppLanguageCode - en maps to en-US`()</ID>
-    <ID>FunctionNaming:TmdbLocaleMapperTest.kt$TmdbLocaleMapperTest$@Test fun `fromAppLanguageCode - es maps to es-ES`()</ID>
-    <ID>FunctionNaming:TmdbLocaleMapperTest.kt$TmdbLocaleMapperTest$@Test fun `fromAppLanguageCode - unknown falls back`()</ID>
   </CurrentIssues>
 </SmellBaseline>

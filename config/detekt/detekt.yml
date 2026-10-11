@@ -9,7 +9,7 @@ complexity:
   LongMethod:
     active: true
     threshold: 80
-    ignoreAnnotated: ['androidx.compose.runtime.Composable']
+    ignoreAnnotated: ['androidx.compose.runtime.Composable', 'Test']
   LongParameterList:
     active: true
     functionThreshold: 8
@@ -28,7 +28,7 @@ complexity:
   CyclomaticComplexMethod:
     active: true
     threshold: 20
-    ignoreAnnotated: ['androidx.compose.runtime.Composable']
+    ignoreAnnotated: ['androidx.compose.runtime.Composable', 'Test']
   LargeClass:
     active: true
     threshold: 600
@@ -52,7 +52,7 @@ style:
 naming:
   FunctionNaming:
     functionPattern: '[a-zA-Z][a-zA-Z0-9]*'
-    ignoreAnnotated: ['androidx.compose.runtime.Composable']
+    ignoreAnnotated: ['androidx.compose.runtime.Composable', 'Test']
   TopLevelPropertyNaming:
     constantPattern: '[A-Z][A-Z0-9_]*|[a-z][A-Za-z0-9]*'
 

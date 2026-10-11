@@ -3,40 +3,6 @@
   <ManuallySuppressedIssues/>
   <CurrentIssues>
     <ID>CyclomaticComplexMethod:MovieMapper.kt$MovieMapper$fun mapToDomain(entity: MovieEntity): Movie</ID>
-    <ID>FunctionNaming:MovieMapperTest.kt$MovieMapperTest$@Test fun `mapToDomainList - round trips list`()</ID>
-    <ID>FunctionNaming:MovieMapperTest.kt$MovieMapperTest$@Test fun `mapToEntity - sets cachedAt from injected clock`()</ID>
-    <ID>FunctionNaming:MovieMapperTest.kt$MovieMapperTest$@Test fun `mapToEntityList - maps each movie`()</ID>
-    <ID>FunctionNaming:MovieMapperTest.kt$MovieMapperTest$@Test fun `round trip - empty collections stay empty`()</ID>
-    <ID>FunctionNaming:MovieMapperTest.kt$MovieMapperTest$@Test fun `round trip - fully populated movie preserves nested fields`()</ID>
-    <ID>FunctionNaming:MovieMapperTest.kt$MovieMapperTest$@Test fun `round trip - minimal movie preserves scalar fields`()</ID>
-    <ID>FunctionNaming:MoviePagingCancellationTest.kt$MoviePagingCancellationTest$@Test fun `movie review load - api cancellation - propagates cancellation`()</ID>
-    <ID>FunctionNaming:MoviePagingCancellationTest.kt$MoviePagingCancellationTest$@Test fun `movie search load - api cancellation - propagates cancellation`()</ID>
-    <ID>FunctionNaming:MoviePagingCancellationTest.kt$MoviePagingCancellationTest$@Test fun `multi search load - api cancellation - propagates cancellation`()</ID>
-    <ID>FunctionNaming:MoviePagingCancellationTest.kt$MoviePagingCancellationTest$@Test fun `related movie load - api cancellation - propagates cancellation`()</ID>
-    <ID>FunctionNaming:MovieRepositoryTest.kt$MovieRepositoryTest$@Test fun `discoverMovies - watch providers selected - sends pipe separated providers and watch region`()</ID>
-    <ID>FunctionNaming:MovieRepositoryTest.kt$MovieRepositoryTest$@Test fun `getFavoriteMovies emits error when dao flow fails`()</ID>
-    <ID>FunctionNaming:MovieRepositoryTest.kt$MovieRepositoryTest$@Test fun `getMovieDetails - api failure with cached movie - emits cached Success`()</ID>
-    <ID>FunctionNaming:MovieRepositoryTest.kt$MovieRepositoryTest$@Test fun `getMovieDetails - api failure with no cache - emits Error`()</ID>
-    <ID>FunctionNaming:MovieRepositoryTest.kt$MovieRepositoryTest$@Test fun `getMovieDetails - api success - emits Loading then Success and caches`()</ID>
-    <ID>FunctionNaming:MovieRepositoryTest.kt$MovieRepositoryTest$@Test fun `getMoviesByGenre - api failure with cached genre movies - emits cached Success`()</ID>
-    <ID>FunctionNaming:MovieRepositoryTest.kt$MovieRepositoryTest$@Test fun `getMoviesInCollection delegates collection id and maps dao rows`()</ID>
-    <ID>FunctionNaming:MovieRepositoryTest.kt$MovieRepositoryTest$@Test fun `getPopularMovies - api failure with cached movies - emits cached Success`()</ID>
-    <ID>FunctionNaming:MovieRepositoryTest.kt$MovieRepositoryTest$@Test fun `getPopularMovies - api failure with empty cache - emits Error`()</ID>
-    <ID>FunctionNaming:MovieRepositoryTest.kt$MovieRepositoryTest$@Test fun `getPopularMovies emits success from API and saves to DB`()</ID>
-    <ID>FunctionNaming:MovieRepositoryTest.kt$MovieRepositoryTest$@Test fun `getTrendingMovies - api failure with cached movies - emits cached Success`()</ID>
-    <ID>FunctionNaming:MovieRepositoryTest.kt$MovieRepositoryTest$@Test fun `getTrendingMovies - api failure with empty cache - emits Error`()</ID>
-    <ID>FunctionNaming:MovieRepositoryTest.kt$MovieRepositoryTest$@Test fun `getTrendingMovies - api success - emits Loading then Success and caches`()</ID>
-    <ID>FunctionNaming:MovieRepositoryTest.kt$MovieRepositoryTest$@Test fun `getWatchlistMovies emits loading then mapped success from dao flow`()</ID>
-    <ID>FunctionNaming:MovieRepositoryTest.kt$MovieRepositoryTest$@Test fun `refreshMovies - request fails - keeps cached movies`()</ID>
-    <ID>FunctionNaming:MovieRepositoryTest.kt$MovieRepositoryTest$@Test fun `searchMovies - api failure with cached results - emits cached Success`()</ID>
-    <ID>FunctionNaming:MovieRepositoryTest.kt$MovieRepositoryTest$@Test fun `searchMovies - api failure with empty cache - emits Error`()</ID>
-    <ID>FunctionNaming:MovieRepositoryTest.kt$MovieRepositoryTest$@Test fun `searchMovies - api success - emits Loading then Success and caches`()</ID>
-    <ID>FunctionNaming:MultiSearchItemMapperTest.kt$MultiSearchItemMapperTest$@Test fun `toMultiSearchListRow - missing optional strings - uses empty defaults`()</ID>
-    <ID>FunctionNaming:MultiSearchItemMapperTest.kt$MultiSearchItemMapperTest$@Test fun `toMultiSearchListRow - movie media type - returns MovieRow`()</ID>
-    <ID>FunctionNaming:MultiSearchItemMapperTest.kt$MultiSearchItemMapperTest$@Test fun `toMultiSearchListRow - person media type - returns PersonRow`()</ID>
-    <ID>FunctionNaming:MultiSearchItemMapperTest.kt$MultiSearchItemMapperTest$@Test fun `toMultiSearchListRow - tv media type - returns TvRow`()</ID>
-    <ID>FunctionNaming:MultiSearchItemMapperTest.kt$MultiSearchItemMapperTest$@Test fun `toMultiSearchListRow - unknown media type - returns null`()</ID>
-    <ID>FunctionNaming:WatchProviderRepositoryImplTest.kt$WatchProviderRepositoryImplTest$@Test fun `getWatchProviderCatalog - movie and tv providers - merges by provider id sorted by priority`()</ID>
     <ID>LongMethod:MovieMapper.kt$MovieMapper$fun mapToDomain(entity: MovieEntity): Movie</ID>
     <ID>NoUnusedImports:MovieMapperTest.kt$com.movieapp.data.movies.mapper.MovieMapperTest.kt</ID>
     <ID>NoUnusedImports:MovieRepositoryTest.kt$com.movieapp.data.movies.repository.MovieRepositoryTest.kt</ID>

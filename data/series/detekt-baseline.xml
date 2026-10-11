@@ -3,28 +3,6 @@
   <ManuallySuppressedIssues/>
   <CurrentIssues>
     <ID>CyclomaticComplexMethod:TvSeriesMapper.kt$TvSeriesMapper$fun mapToDomain(entity: TvSeriesEntity): TvSeries</ID>
-    <ID>FunctionNaming:SeriesPagingCancellationTest.kt$SeriesPagingCancellationTest$@Test fun `related series load - api cancellation - propagates cancellation`()</ID>
-    <ID>FunctionNaming:SeriesPagingCancellationTest.kt$SeriesPagingCancellationTest$@Test fun `series review load - api cancellation - propagates cancellation`()</ID>
-    <ID>FunctionNaming:SeriesPagingCancellationTest.kt$SeriesPagingCancellationTest$@Test fun `series search load - api cancellation - propagates cancellation`()</ID>
-    <ID>FunctionNaming:SeriesRepositoryTest.kt$SeriesRepositoryTest$@Test fun `discoverSeries - watch providers selected - sends pipe separated providers and watch region`()</ID>
-    <ID>FunctionNaming:SeriesRepositoryTest.kt$SeriesRepositoryTest$@Test fun `getSeriesById - api failure with cache - returns cached Success`()</ID>
-    <ID>FunctionNaming:SeriesRepositoryTest.kt$SeriesRepositoryTest$@Test fun `getSeriesById - api failure with no cache - returns Error`()</ID>
-    <ID>FunctionNaming:SeriesRepositoryTest.kt$SeriesRepositoryTest$@Test fun `getSeriesById - api success - inserts entity and returns Success`()</ID>
-    <ID>FunctionNaming:SeriesRepositoryTest.kt$SeriesRepositoryTest$@Test fun `getSeriesByIdFlow - cached summary - fetches full details`()</ID>
-    <ID>FunctionNaming:SeriesRepositoryTest.kt$SeriesRepositoryTest$@Test fun `getSeriesByIdFlow - no entity in dao and api succeeds - emits Loading then Success`()</ID>
-    <ID>FunctionNaming:SeriesRepositoryTest.kt$SeriesRepositoryTest$@Test fun `getSeriesByIdFlow - offline - returns cached details`()</ID>
-    <ID>FunctionNaming:SeriesRepositoryTest.kt$SeriesRepositoryTest$@Test fun `getTrendingTvSeriesPage - api failure with cache - emits cached Success`()</ID>
-    <ID>FunctionNaming:SeriesRepositoryTest.kt$SeriesRepositoryTest$@Test fun `getTrendingTvSeriesPage - api failure with empty cache - emits Error`()</ID>
-    <ID>FunctionNaming:SeriesRepositoryTest.kt$SeriesRepositoryTest$@Test fun `getTrendingTvSeriesPage - api success - emits Loading then Success and caches`()</ID>
-    <ID>FunctionNaming:SeriesRepositoryTest.kt$SeriesRepositoryTest$@Test fun `searchSeriesResults - api failure with cached results - emits cached Success`()</ID>
-    <ID>FunctionNaming:SeriesRepositoryTest.kt$SeriesRepositoryTest$@Test fun `searchSeriesResults - api failure with empty cache - emits Error`()</ID>
-    <ID>FunctionNaming:SeriesRepositoryTest.kt$SeriesRepositoryTest$@Test fun `searchSeriesResults - api success - emits Loading then Success`()</ID>
-    <ID>FunctionNaming:TvSeriesMapperTest.kt$TvSeriesMapperTest$@Test fun `mapToDomainList - round trips list`()</ID>
-    <ID>FunctionNaming:TvSeriesMapperTest.kt$TvSeriesMapperTest$@Test fun `mapToEntity - sets cachedAt from injected clock`()</ID>
-    <ID>FunctionNaming:TvSeriesMapperTest.kt$TvSeriesMapperTest$@Test fun `mapToEntityList - maps each series`()</ID>
-    <ID>FunctionNaming:TvSeriesMapperTest.kt$TvSeriesMapperTest$@Test fun `round trip - empty collections and null nested stay empty or null`()</ID>
-    <ID>FunctionNaming:TvSeriesMapperTest.kt$TvSeriesMapperTest$@Test fun `round trip - fully populated series preserves nested fields`()</ID>
-    <ID>FunctionNaming:TvSeriesMapperTest.kt$TvSeriesMapperTest$@Test fun `round trip - minimal series preserves scalar fields`()</ID>
     <ID>LongMethod:TvSeriesMapper.kt$TvSeriesMapper$fun mapToDomain(entity: TvSeriesEntity): TvSeries</ID>
     <ID>NoUnusedImports:SeriesRepositoryTest.kt$com.movieapp.data.series.repository.SeriesRepositoryTest.kt</ID>
     <ID>NoUnusedImports:TvSeriesMapperTest.kt$com.movieapp.data.series.mapper.TvSeriesMapperTest.kt</ID>

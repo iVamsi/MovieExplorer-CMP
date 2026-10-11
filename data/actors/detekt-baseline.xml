@@ -3,21 +3,6 @@
   <ManuallySuppressedIssues/>
   <CurrentIssues>
     <ID>ArgumentListWrapping:ActorRepositoryImpl.kt$ActorRepositoryImpl$(apiService, transactionRunner, remoteKeysDao, actorDao, actorMapper)</ID>
-    <ID>FunctionNaming:ActorMapperTest.kt$ActorMapperTest$@Test fun `mapToDomainList - round trips list`()</ID>
-    <ID>FunctionNaming:ActorMapperTest.kt$ActorMapperTest$@Test fun `mapToEntity - sets cachedAt from injected clock`()</ID>
-    <ID>FunctionNaming:ActorMapperTest.kt$ActorMapperTest$@Test fun `mapToEntityList - maps each actor`()</ID>
-    <ID>FunctionNaming:ActorMapperTest.kt$ActorMapperTest$@Test fun `round trip - fully populated actor preserves nested fields`()</ID>
-    <ID>FunctionNaming:ActorMapperTest.kt$ActorMapperTest$@Test fun `round trip - minimal actor preserves scalar fields`()</ID>
-    <ID>FunctionNaming:ActorMapperTest.kt$ActorMapperTest$@Test fun `round trip - null nested fields stay null`()</ID>
-    <ID>FunctionNaming:ActorPagingCancellationTest.kt$ActorPagingCancellationTest$@Test fun `load - api cancellation - propagates cancellation`()</ID>
-    <ID>FunctionNaming:ActorRepositoryTest.kt$ActorRepositoryTest$@Test fun `getActorById - api failure with cache - returns cached Success`()</ID>
-    <ID>FunctionNaming:ActorRepositoryTest.kt$ActorRepositoryTest$@Test fun `getActorById - api failure with no cache - returns Error`()</ID>
-    <ID>FunctionNaming:ActorRepositoryTest.kt$ActorRepositoryTest$@Test fun `getActorById - api success - inserts entity and returns Success`()</ID>
-    <ID>FunctionNaming:ActorRepositoryTest.kt$ActorRepositoryTest$@Test fun `getActorByIdFlow - cached summary - fetches biography`()</ID>
-    <ID>FunctionNaming:ActorRepositoryTest.kt$ActorRepositoryTest$@Test fun `getActorByIdFlow - offline - returns cached details`()</ID>
-    <ID>FunctionNaming:ActorRepositoryTest.kt$ActorRepositoryTest$@Test fun `getActorMovieCredits - maps cast entries into Movie list`()</ID>
-    <ID>FunctionNaming:ActorRepositoryTest.kt$ActorRepositoryTest$@Test fun `searchActorsResults - api failure with cache - emits cached Success`()</ID>
-    <ID>FunctionNaming:ActorRepositoryTest.kt$ActorRepositoryTest$@Test fun `searchActorsResults - api success - emits Loading then Success`()</ID>
     <ID>LoopWithTooManyJumpStatements:ActorRepositoryImpl.kt$ActorRepositoryImpl$while</ID>
     <ID>NoUnusedImports:ActorMapperTest.kt$com.movieapp.data.actors.mapper.ActorMapperTest.kt</ID>
     <ID>NoUnusedImports:ActorRepositoryTest.kt$com.movieapp.data.actors.repository.ActorRepositoryTest.kt</ID>

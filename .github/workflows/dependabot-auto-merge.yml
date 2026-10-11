@@ -40,4 +40,4 @@ jobs:
           case "$DEP_VERSION" in
             *alpha*|*beta*|*rc*|*RC*) exit 0 ;;
           esac
-          gh pr merge "$PR_NUMBER" --repo "$REPO" --merge --delete-branch
+          gh pr merge "$PR_NUMBER" --repo "$REPO" --squash --delete-branch

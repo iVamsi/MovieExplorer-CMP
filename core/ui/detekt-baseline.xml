@@ -2,7 +2,6 @@
 <SmellBaseline>
   <ManuallySuppressedIssues/>
   <CurrentIssues>
-    <ID>FunctionNaming:LocalizedLabelsTest.kt$LocalizedLabelsTest$@Test fun `values strings - section labels - present in en and es`()</ID>
     <ID>MultiLineIfElse:DetailScreenComponents.kt$Res.string.cd_add_favorite</ID>
     <ID>MultiLineIfElse:DetailScreenComponents.kt$Res.string.cd_add_watchlist</ID>
     <ID>MultiLineIfElse:DetailScreenComponents.kt$Res.string.cd_remove_favorite</ID>

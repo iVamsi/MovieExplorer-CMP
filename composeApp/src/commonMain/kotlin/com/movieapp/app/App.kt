@@ -91,8 +91,10 @@ fun App(viewModel: AppViewModel = koinViewModel()) {
                     }
                 },
                 dismissButton = {
-                    TextButton(onClick = { viewModel.onEvent(AppUiEvent.DisableLock) }) {
-                        Text(stringResource(Res.string.biometric_recovery_disable))
+                    if (uiState.canDisableLock) {
+                        TextButton(onClick = { viewModel.onEvent(AppUiEvent.DisableLock) }) {
+                            Text(stringResource(Res.string.biometric_recovery_disable))
+                        }
                     }
                 },
             )

@@ -38,6 +38,7 @@ data class AppUiState(
     val useWallpaperColors: Boolean = false,
     val isLocked: Boolean = true,
     val showLockRecovery: Boolean = false,
+    val canDisableLock: Boolean = false,
 )
 
 sealed interface AppUiEvent {
@@ -174,12 +175,14 @@ class AppViewModel(
                 it.copy(
                     isLocked = appLockPolicy.afterAuthentication(result) == AppLockState.Locked,
                     showLockRecovery = result != AppLockAuthResult.Succeeded,
+                    canDisableLock = result == AppLockAuthResult.Unavailable,
                 )
             }
         }
     }
 
     private fun disableLock() {
+        if (!_uiState.value.canDisableLock) return
         viewModelScope.launch {
             preferencesRepository.setBiometricLockEnabled(false)
             _uiState.update { it.copy(isLocked = false, showLockRecovery = false) }

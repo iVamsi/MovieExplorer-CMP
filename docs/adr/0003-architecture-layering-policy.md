@@ -1,4 +1,4 @@
-# ADR-0004: Architecture layering policy
+# ADR-0003: Architecture layering policy
 
 **Status:** Accepted
 

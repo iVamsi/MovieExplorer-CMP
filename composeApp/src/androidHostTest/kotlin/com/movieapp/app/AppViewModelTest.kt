@@ -16,6 +16,7 @@ import io.mockk.mockk
 import kotlin.time.Instant
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.test.UnconfinedTestDispatcher
 import kotlinx.coroutines.test.advanceUntilIdle
 import kotlinx.coroutines.test.resetMain
@@ -100,6 +101,29 @@ class AppViewModelTest {
 
         assertThat(viewModel.uiState.value.isLocked).isFalse()
         assertThat(viewModel.uiState.value.showLockRecovery).isFalse()
+    }
+
+    @Test
+    fun `disable lock - after canceled prompt - stays locked`() = runTest {
+        val authenticator = mockk<BiometricAuthenticator>()
+        coEvery { authenticator.authenticate(any(), any()) } returns AppLockAuthResult.Canceled
+        val preferences = preferencesRepository()
+        preferences.setBiometricLockEnabled(true)
+        val viewModel =
+            AppViewModel(
+                preferencesRepository = preferences,
+                authRepository = FakeAuthRepository(),
+                biometricAuthenticator = authenticator,
+                clock = FixedClock(Instant.parse("2026-10-10T12:00:00Z")),
+            )
+
+        viewModel.onEvent(AppUiEvent.EnteredForeground("Unlock", "Confirm identity"))
+        viewModel.onEvent(AppUiEvent.DisableLock)
+        advanceUntilIdle()
+
+        assertThat(viewModel.uiState.value.isLocked).isTrue()
+        assertThat(viewModel.uiState.value.canDisableLock).isFalse()
+        assertThat(preferences.biometricLockEnabled.first()).isTrue()
     }
 
     private fun createViewModel(authRepository: FakeAuthRepository) =
