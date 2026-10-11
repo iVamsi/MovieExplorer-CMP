@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="search"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher"
+        android:shortcutShortLabel="@string/shortcut_search_short"
+        android:shortcutLongLabel="@string/shortcut_search_long">
+        <intent android:action="android.intent.action.VIEW" android:data="movieapp://search" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+    <shortcut
+        android:shortcutId="library"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher"
+        android:shortcutShortLabel="@string/shortcut_library_short"
+        android:shortcutLongLabel="@string/shortcut_library_long">
+        <intent android:action="android.intent.action.VIEW" android:data="movieapp://collections" />
+    </shortcut>
+    <shortcut
+        android:shortcutId="upcoming"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher"
+        android:shortcutShortLabel="@string/shortcut_upcoming_short"
+        android:shortcutLongLabel="@string/shortcut_upcoming_long">
+        <intent android:action="android.intent.action.VIEW" android:data="movieapp://upcoming" />
+    </shortcut>
+</shortcuts>

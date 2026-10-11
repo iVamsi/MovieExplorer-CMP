@@ -22,6 +22,21 @@ The build reads these values and generates `AppConfig` for both platforms. The k
 
 This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.
 
+## Quality checks
+
+```bash
+./gradlew detekt testAndroidHostTest iosSimulatorArm64Test koverVerify
+./gradlew :androidApp:assembleDebug :androidApp:assembleRelease
+```
+
+## Known gaps
+
+- Wearable, widget, casting, notification, and release-reminder integrations are outside the first release.
+- Trailers open in the browser, and artwork does not derive a backdrop accent color.
+- Language changes on iOS open the system Settings page.
+- UI instrumentation coverage remains a follow-up; ViewModels, repositories, routing, and lock policy have host tests.
+- Category paging currently shares cached movie rows, and paging requests do not yet partition cache keys by language or region.
+
 ## License
 
 [MIT](LICENSE)

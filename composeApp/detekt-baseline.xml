@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>FunctionNaming:AppViewModelTest.kt$AppViewModelTest$@Test fun `deep link - approved callback - completes login and reports success`()</ID>
+    <ID>FunctionNaming:AppViewModelTest.kt$AppViewModelTest$@Test fun `deep link - denied callback - does not complete login`()</ID>
+    <ID>FunctionNaming:AppViewModelTest.kt$AppViewModelTest$@Test fun `foreground - lock enabled - authenticates and unlocks`()</ID>
+    <ID>MatchingDeclarationName:MediaListDetailPane.kt$MediaDetailOpener</ID>
+    <ID>MultiLineIfElse:ImageGalleryScreen.kt$ArtworkLoadState.Loading</ID>
+    <ID>MultiLineIfElse:ImageGalleryScreen.kt$ArtworkLoadState.Unavailable</ID>
+    <ID>NoConsecutiveBlankLines:AppLockPolicy.kt$ </ID>
+    <ID>NoConsecutiveBlankLines:AppRoutes.kt$ </ID>
+    <ID>NoConsecutiveBlankLines:ImageGalleryScreen.kt$ </ID>
+    <ID>NoConsecutiveBlankLines:ImageGalleryViewModel.kt$ </ID>
+    <ID>NoConsecutiveBlankLines:LibraryListDetailPane.kt$ </ID>
+    <ID>NoConsecutiveBlankLines:LibraryTabsScreen.kt$ </ID>
+    <ID>NoConsecutiveBlankLines:MovieAppNavigation.kt$ </ID>
+    <ID>NoConsecutiveBlankLines:SearchListDetailPane.kt$ </ID>
+    <ID>TopLevelPropertyNaming:ImageGalleryScreen.kt$private const val MaximumGalleryScale = 4f</ID>
+    <ID>TopLevelPropertyNaming:ImageGalleryScreen.kt$private const val MinimumGalleryScale = 1f</ID>
+  </CurrentIssues>
+</SmellBaseline>

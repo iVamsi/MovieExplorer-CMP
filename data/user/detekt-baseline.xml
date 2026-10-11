@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>FunctionNaming:AuthRepositoryImplTest.kt$AuthRepositoryImplTest$@Test fun `completeLoginWithRequestToken - pending login matches - creates session and clears pending login`()</ID>
+    <ID>FunctionNaming:AuthRepositoryImplTest.kt$AuthRepositoryImplTest$@Test fun `completeLoginWithRequestToken - state mismatch - rejects callback`()</ID>
+    <ID>FunctionNaming:AuthRepositoryImplTest.kt$AuthRepositoryImplTest$@Test fun `completeLoginWithRequestToken - token mismatch - rejects callback`()</ID>
+    <ID>FunctionNaming:AuthRepositoryImplTest.kt$AuthRepositoryImplTest$@Test fun `createLoginApprovalUrl - request token succeeds - stores pending token and state`()</ID>
+    <ID>FunctionNaming:OfflineContentRepositoryImplTest.kt$OfflineContentRepositoryImplTest$@Test fun `prefetchContent - for movie - fetches details caches images and pins offline row`()</ID>
+    <ID>FunctionNaming:SessionStateCoordinatorTest.kt$SessionStateCoordinatorTest$@Test fun `construction - persistence load suspended - does not block and exposes initializing state`()</ID>
+    <ID>FunctionNaming:SessionStateCoordinatorTest.kt$SessionStateCoordinatorTest$@Test fun `updates - concurrent writes - persist atomically`()</ID>
+    <ID>FunctionNaming:StatsRepositoryImplTest.kt$StatsRepositoryImplTest$@Test fun `getUserWatchStats - aggregates deduped favorites ratings and watched collection items`()</ID>
+    <ID>FunctionNaming:UserRepositoryTest.kt$UserRepositoryTest$@Test fun `addToFavorites - dao failure returns Error`()</ID>
+    <ID>FunctionNaming:UserRepositoryTest.kt$UserRepositoryTest$@Test fun `addToFavorites - inserts entity with clock timestamp and pushes to tmdb`()</ID>
+    <ID>FunctionNaming:UserRepositoryTest.kt$UserRepositoryTest$@Test fun `addToWatchlist - inserts entity with clock timestamp`()</ID>
+    <ID>FunctionNaming:UserRepositoryTest.kt$UserRepositoryTest$@Test fun `deleteCollection - deletes child items before collection row`()</ID>
+    <ID>FunctionNaming:UserRepositoryTest.kt$UserRepositoryTest$@Test fun `getCollectionById - emits Loading then Error when dao returns null`()</ID>
+    <ID>FunctionNaming:UserRepositoryTest.kt$UserRepositoryTest$@Test fun `getUserRating - returns Success with float rating when present`()</ID>
+    <ID>FunctionNaming:UserRepositoryTest.kt$UserRepositoryTest$@Test fun `getUserRating - returns Success with null when dao has no row`()</ID>
+    <ID>FunctionNaming:UserRepositoryTest.kt$UserRepositoryTest$@Test fun `isFavorite - returns false when dao row missing`()</ID>
+    <ID>FunctionNaming:UserRepositoryTest.kt$UserRepositoryTest$@Test fun `isFavorite - returns true when dao row exists`()</ID>
+    <ID>FunctionNaming:UserRepositoryTest.kt$UserRepositoryTest$@Test fun `rateContent - coerces rating into 1-10 bounds`()</ID>
+    <ID>FunctionNaming:UserRepositoryTest.kt$UserRepositoryTest$@Test fun `rateContent - when existing rating - updates and preserves notes if null`()</ID>
+    <ID>FunctionNaming:UserRepositoryTest.kt$UserRepositoryTest$@Test fun `rateContent - when no existing rating - inserts new row`()</ID>
+    <ID>FunctionNaming:UserRepositoryTest.kt$UserRepositoryTest$@Test fun `removeFromCollection - deletes matching content only from target collection`()</ID>
+    <ID>FunctionNaming:UserRepositoryTest.kt$UserRepositoryTest$@Test fun `removeFromFavorites - delegates to dao and pushes false to tmdb`()</ID>
+    <ID>FunctionNaming:UserRepositoryTest.kt$UserRepositoryTest$@Test fun `removeRating - delegates to dao and pushes null to tmdb`()</ID>
+    <ID>NoUnusedImports:OfflineContentRepositoryImplTest.kt$com.movieapp.data.user.repository.OfflineContentRepositoryImplTest.kt</ID>
+    <ID>NoUnusedImports:UserRepositoryTest.kt$com.movieapp.data.user.repository.UserRepositoryTest.kt</ID>
+    <ID>NoWildcardImports:UserRepositoryImpl.kt$import com.movieapp.core.database.entity.*</ID>
+    <ID>WildcardImport:UserRepositoryImpl.kt$import com.movieapp.core.database.entity.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

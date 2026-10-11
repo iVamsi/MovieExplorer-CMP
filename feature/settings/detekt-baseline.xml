@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>FunctionNaming:AccountViewModelTest.kt$AccountViewModelTest$@Test fun `biometricAvailable - exposes authenticator capability`()</ID>
+    <ID>FunctionNaming:AccountViewModelTest.kt$AccountViewModelTest$@Test fun `biometricLockEnabled - re-exposes preference flow`()</ID>
+    <ID>FunctionNaming:AccountViewModelTest.kt$AccountViewModelTest$@Test fun `logout - delegates to auth repository`()</ID>
+    <ID>FunctionNaming:AccountViewModelTest.kt$AccountViewModelTest$@Test fun `setBiometricLockEnabled - persists flag via preferences`()</ID>
+    <ID>FunctionNaming:AccountViewModelTest.kt$AccountViewModelTest$@Test fun `startTmdbLogin - on login url failure - emits message to user`()</ID>
+    <ID>FunctionNaming:AccountViewModelTest.kt$AccountViewModelTest$@Test fun `startTmdbLogin - on login url success - emits open url`()</ID>
+    <ID>FunctionNaming:SettingsViewModelTest.kt$SettingsViewModelTest$@Test fun `init - loads offline library`()</ID>
+    <ID>FunctionNaming:SettingsViewModelTest.kt$SettingsViewModelTest$@Test fun `init - reads disk cache size and converts bytes to MB`()</ID>
+    <ID>FunctionNaming:SettingsViewModelTest.kt$SettingsViewModelTest$@Test fun `onEvent AdultContentChanged - delegates to preferences`()</ID>
+    <ID>FunctionNaming:SettingsViewModelTest.kt$SettingsViewModelTest$@Test fun `onEvent AppLanguageChanged - persists language and applies locale`()</ID>
+    <ID>FunctionNaming:SettingsViewModelTest.kt$SettingsViewModelTest$@Test fun `onEvent ClearImageCache - clears coil caches and refreshes size`()</ID>
+    <ID>FunctionNaming:SettingsViewModelTest.kt$SettingsViewModelTest$@Test fun `onEvent ClearImageCache - emits cache cleared side effect`()</ID>
+    <ID>FunctionNaming:SettingsViewModelTest.kt$SettingsViewModelTest$@Test fun `onEvent DeleteOfflineContent - removes offline row`()</ID>
+    <ID>FunctionNaming:SettingsViewModelTest.kt$SettingsViewModelTest$@Test fun `onEvent ThemeModeChanged - persists mode via preferences`()</ID>
+    <ID>FunctionNaming:SettingsViewModelTest.kt$SettingsViewModelTest$@Test fun `onEvent WatchRegionChanged - normalises to upper case two-letter code`()</ID>
+    <ID>FunctionNaming:SettingsViewModelTest.kt$SettingsViewModelTest$@Test fun `onEvent WatchRegionChanged - rejects codes with fewer than 2 letters`()</ID>
+    <ID>FunctionNaming:SettingsViewModelTest.kt$SettingsViewModelTest$@Test fun `themeMode - flows default until preference collected`()</ID>
+    <ID>FunctionNaming:SettingsViewModelTest.kt$SettingsViewModelTest$@Test fun `uiState - combines preferences cache and offline content`()</ID>
+    <ID>NoConsecutiveBlankLines:AccountScreen.kt$ </ID>
+  </CurrentIssues>
+</SmellBaseline>

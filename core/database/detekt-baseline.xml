@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>ArgumentListWrapping:DatabasePlatformModule.android.kt$(DATABASE_FILE)</ID>
+    <ID>ArgumentListWrapping:DatabasePlatformModule.android.kt$(context = context, name = context.getDatabasePath(DATABASE_FILE).absolutePath)</ID>
+    <ID>NoWildcardImports:ActorDao.kt$import androidx.room.*</ID>
+    <ID>NoWildcardImports:MovieDao.kt$import androidx.room.*</ID>
+    <ID>NoWildcardImports:TvSeriesDao.kt$import androidx.room.*</ID>
+    <ID>NoWildcardImports:UserDao.kt$import androidx.room.*</ID>
+    <ID>NoWildcardImports:UserDao.kt$import com.movieapp.core.database.entity.*</ID>
+    <ID>SwallowedException:ListConverter.kt$ListConverter$e: Exception</ID>
+    <ID>SwallowedException:MapConverter.kt$MapConverter$e: Exception</ID>
+    <ID>SwallowedException:ModelConverters.kt$ModelConverters$e: Exception</ID>
+    <ID>TooManyFunctions:ActorDao.kt$ActorDao</ID>
+    <ID>TooManyFunctions:MovieDao.kt$MovieDao</ID>
+    <ID>TooManyFunctions:TvSeriesDao.kt$TvSeriesDao</ID>
+    <ID>TooManyFunctions:UserDao.kt$UserDao</ID>
+    <ID>WildcardImport:ActorDao.kt$import androidx.room.*</ID>
+    <ID>WildcardImport:MovieDao.kt$import androidx.room.*</ID>
+    <ID>WildcardImport:TvSeriesDao.kt$import androidx.room.*</ID>
+    <ID>WildcardImport:UserDao.kt$import androidx.room.*</ID>
+    <ID>WildcardImport:UserDao.kt$import com.movieapp.core.database.entity.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

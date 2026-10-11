@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>LargeClass:TmdbApiService.kt$TmdbApiService</ID>
+    <ID>MatchingDeclarationName:NetworkModule.kt$NetworkConfig</ID>
+    <ID>NoWildcardImports:TmdbApiService.kt$import com.movieapp.core.model.*</ID>
+    <ID>TooManyFunctions:TmdbApiService.kt$TmdbApiService</ID>
+    <ID>WildcardImport:TmdbApiService.kt$import com.movieapp.core.model.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

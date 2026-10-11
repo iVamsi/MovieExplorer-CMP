@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>FunctionNaming:ProfileAccountPresentationTest.kt$ProfileAccountPresentationTest$@Test fun `accountPresentation - signed in - shows TMDB identity without claiming sync`()</ID>
+    <ID>FunctionNaming:ProfileAccountPresentationTest.kt$ProfileAccountPresentationTest$@Test fun `accountPresentation - signed out - keeps local library available`()</ID>
+    <ID>FunctionNaming:ProfileViewModelTest.kt$ProfileViewModelTest$@Test fun `initial state - all lists are empty and not loading`()</ID>
+    <ID>FunctionNaming:ProfileViewModelTest.kt$ProfileViewModelTest$@Test fun `loadUserData - when all succeed - state shows all data`()</ID>
+    <ID>FunctionNaming:ProfileViewModelTest.kt$ProfileViewModelTest$@Test fun `loadUserData - when collections loaded - state shows collections`()</ID>
+    <ID>FunctionNaming:ProfileViewModelTest.kt$ProfileViewModelTest$@Test fun `loadUserData - when movies error - state shows error`()</ID>
+    <ID>FunctionNaming:ProfileViewModelTest.kt$ProfileViewModelTest$@Test fun `loadUserData - when stats loaded - state shows watch stats`()</ID>
+    <ID>FunctionNaming:ProfileViewModelTest.kt$ProfileViewModelTest$@Test fun `loadUserData - when watchlist movies loaded - state shows movies`()</ID>
+    <ID>FunctionNaming:ProfileViewModelTest.kt$ProfileViewModelTest$@Test fun `loadUserData - when watchlist series loaded - state shows series`()</ID>
+    <ID>FunctionNaming:ProfileViewModelTest.kt$ProfileViewModelTest$@Test fun `pull refresh - repository cancellation - refresh job remains canceled`()</ID>
+  </CurrentIssues>
+</SmellBaseline>

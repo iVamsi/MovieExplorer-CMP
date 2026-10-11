@@ -5,6 +5,7 @@ import androidx.lifecycle.viewModelScope
 import com.movieapp.core.common.Result
 import com.movieapp.core.common.preferences.PreferencesRepository
 import com.movieapp.core.domain.repository.AuthRepository
+import com.movieapp.core.ui.security.BiometricAuthenticator
 import com.movieapp.feature.settings.resources.Res
 import com.movieapp.feature.settings.resources.account_error_login_url
 import kotlinx.coroutines.channels.Channel
@@ -22,6 +23,7 @@ sealed interface AccountSideEffect {
 class AccountViewModel(
     private val authRepository: AuthRepository,
     private val preferencesRepository: PreferencesRepository,
+    biometricAuthenticator: BiometricAuthenticator,
 ) : ViewModel() {
 
     private val _sideEffects = Channel<AccountSideEffect>(Channel.BUFFERED)
@@ -30,6 +32,8 @@ class AccountViewModel(
     val authState = authRepository.authState
 
     val biometricLockEnabled = preferencesRepository.biometricLockEnabled
+
+    val biometricAvailable = biometricAuthenticator.isAvailable()
 
     fun setBiometricLockEnabled(enabled: Boolean) {
         viewModelScope.launch { preferencesRepository.setBiometricLockEnabled(enabled) }

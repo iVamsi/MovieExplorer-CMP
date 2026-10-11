@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>MatchingDeclarationName:TestTime.kt$FixedClock : Clock</ID>
+    <ID>NoWildcardImports:FakeData.kt$import com.movieapp.core.model.*</ID>
+    <ID>WildcardImport:FakeData.kt$import com.movieapp.core.model.*</ID>
+  </CurrentIssues>
+</SmellBaseline>
