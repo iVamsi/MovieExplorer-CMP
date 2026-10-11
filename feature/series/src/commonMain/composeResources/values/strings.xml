@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cd_add_watchlist">Add to watchlist</string>
+    <string name="cd_remove_watchlist">Remove from watchlist</string>
+    <string name="cd_add_favorite">Add to favorites</string>
+    <string name="cd_remove_favorite">Remove from favorites</string>
+    <string name="cd_save_offline">Save for offline</string>
+    <string name="cd_saved_offline">Saved for offline</string>
+    <string name="cd_genre">Genre: %1$s</string>
+    <string name="cd_keyword">Keyword: %1$s</string>
+    <string name="cd_open_actor_profile">Open profile for %1$s</string>
+    <string name="cd_series_backdrop">Backdrop for %1$s</string>
+</resources>
