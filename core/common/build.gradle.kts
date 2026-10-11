@@ -5,7 +5,7 @@ kotlin {
         commonMain.dependencies {
             implementation(project(":core:model"))
             implementation(lib("datastore-preferences"))
-            implementation(lib("kotlinx-datetime"))
+            api(lib("kotlinx-datetime"))
         }
         androidMain.dependencies {
             implementation(lib("kotlinx-coroutines-android"))
