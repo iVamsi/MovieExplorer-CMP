@@ -1,6 +1,5 @@
 package com.movieapp.feature.actors.screens.actor
 
-import androidx.lifecycle.SavedStateHandle
 import app.cash.turbine.test
 import com.google.common.truth.Truth.assertThat
 import com.movieapp.core.common.Result
@@ -46,12 +45,11 @@ class ActorDetailViewModelTest {
     private fun createViewModel(actorId: Int = testActor.id): ActorDetailViewModel {
         coEvery { userRepository.isFavorite(actorId, ContentType.ACTOR) } returns false
         coEvery { toggleFavoriteActorUseCase(any(), any()) } returns Result.Success(Unit)
-        val savedStateHandle = SavedStateHandle(mapOf("actorId" to actorId))
         return ActorDetailViewModel(
+            actorId = actorId,
             actorRepository = actorRepository,
             userRepository = userRepository,
             toggleFavoriteActorUseCase = toggleFavoriteActorUseCase,
-            savedStateHandle = savedStateHandle,
         )
     }
 
