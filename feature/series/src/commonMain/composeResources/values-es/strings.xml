@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cd_add_watchlist">Añadir a la lista de seguimiento</string>
+    <string name="cd_remove_watchlist">Quitar de la lista de seguimiento</string>
+    <string name="cd_add_favorite">Añadir a favoritos</string>
+    <string name="cd_remove_favorite">Quitar de favoritos</string>
+    <string name="cd_save_offline">Guardar sin conexión</string>
+    <string name="cd_saved_offline">Guardado sin conexión</string>
+    <string name="cd_genre">Género: %1$s</string>
+    <string name="cd_keyword">Palabra clave: %1$s</string>
+    <string name="cd_open_actor_profile">Abrir perfil de %1$s</string>
+    <string name="cd_series_backdrop">Fondo de %1$s</string>
+</resources>
