@@ -1,0 +1,4 @@
+<resources>
+    <string name="theme_wallpaper_colors">Usar colores del fondo de pantalla</string>
+    <string name="theme_wallpaper_colors_hint">Usa la paleta del dispositivo en lugar de los tonos ámbar.</string>
+</resources>

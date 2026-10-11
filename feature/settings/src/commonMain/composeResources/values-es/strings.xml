@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="help_faq_heading">Preguntas frecuentes</string>
+    <string name="help_faq_watchlist_q">¿Cómo añado una película a mi lista de seguimiento?</string>
+    <string name="help_faq_watchlist_a">Abre la ficha de cualquier película y pulsa Añadir a la lista de seguimiento. Puedes ver toda la lista en la pestaña Perfil.</string>
+    <string name="help_faq_collection_q">¿Cómo creo una colección?</string>
+    <string name="help_faq_collection_a">Ve a la pestaña Colecciones y pulsa el botón +. Pon un nombre a la colección y empieza a añadir películas y series.</string>
+    <string name="help_faq_tmdb_q">¿Qué es TMDB y de dónde salen los datos?</string>
+    <string name="help_faq_tmdb_a">La app usa la API de The Movie Database (TMDB) para obtener información, pósteres y valoraciones. TMDB es una base de datos comunitaria de cine y TV.</string>
+    <string name="help_faq_theme_q">¿Cómo cambio el tema de la app?</string>
+    <string name="help_faq_theme_a">Abre Perfil, pulsa el icono de engranaje para Ajustes y luego Tema. Puedes elegir Claro, Oscuro o el predeterminado del sistema.</string>
+    <string name="help_faq_account_q">¿Qué hace «Iniciar sesión con TMDB»?</string>
+    <string name="help_faq_account_a">Iniciar sesión es opcional. Permite sincronizar favoritos, lista de seguimiento, valoraciones con estrellas y personas favoritas con tu cuenta de TMDB. Las colecciones personalizadas, las notas de valoración, las búsquedas recientes, el tema y las notificaciones solo se guardan en este dispositivo.</string>
+    <string name="help_faq_report_q">¿Cómo informo de un error o pido una función?</string>
+    <string name="help_faq_report_a">Visita el repositorio de GitHub enlazado en Perfil → Ajustes → Acerca de. Abre un issue nuevo y describe el error o la función que te gustaría.</string>
+
+    <string name="about_app_name">MovieApp</string>
+    <string name="about_version_label">Versión %1$s</string>
+    <string name="about_rate_app">Valorar la app</string>
+    <string name="about_view_github">Ver en GitHub</string>
+    <string name="about_open_source_licenses">Licencias de código abierto</string>
+
+    <string name="theme_choose_hint">Elige el tema que prefieras</string>
+    <string name="theme_option_light">Claro</string>
+    <string name="theme_option_dark">Oscuro</string>
+    <string name="theme_option_system">Predeterminado del sistema</string>
+
+    <string name="language_choose_hint">Elige el idioma de los menús y etiquetas de la app</string>
+    <string name="language_option_english">Inglés</string>
+    <string name="language_option_spanish">Español</string>
+
+    <string name="storage_image_cache_title">Caché de imágenes</string>
+    <string name="storage_cache_mb_used">%1$d MB en uso</string>
+    <string name="storage_cache_description">Pósteres y gráficos en caché</string>
+    <string name="storage_clear_cache">Vaciar caché</string>
+    <string name="storage_cache_cleared">Caché de imágenes vaciada</string>
+    <string name="storage_clear_cache_hint">Vaciar la caché elimina las imágenes descargadas. Se volverán a descargar cuando hagan falta.</string>
+    <string name="storage_offline_library_title">Biblioteca sin conexión</string>
+    <string name="storage_offline_empty">Las películas y series guardadas aparecerán aquí.</string>
+    <string name="storage_offline_clear_all">Borrar todo</string>
+    <string name="storage_offline_delete">Eliminar elemento sin conexión</string>
+    <string name="storage_offline_fallback_title">Título #%1$d</string>
+
+
+    <string name="account_screen_title">Cuenta</string>
+    <string name="account_signed_out_title">Sin sesión iniciada</string>
+    <string name="account_signed_out_body">Inicia sesión con tu cuenta de TMDB para sincronizar favoritos, lista de seguimiento y valoraciones entre dispositivos. Tus datos siguen bajo tu control; la app usa tu propia clave API en local.properties.</string>
+    <string name="account_sign_in_tmdb">Iniciar sesión con TMDB</string>
+    <string name="account_sign_out">Cerrar sesión</string>
+    <string name="account_sync_summary">Con sesión iniciada, los cambios en favoritos, lista de seguimiento y valoraciones se sincronizan con tu cuenta de TMDB. Las colecciones personalizadas y las notas de valoración permanecen en este dispositivo. Tema, notificaciones e historial de búsqueda son siempre locales.</string>
+    <string name="account_error_login_url">No se pudo iniciar el inicio de sesión. Comprueba la red y la clave API.</string>
+    <string name="account_username_label">Nombre de usuario</string>
+    <string name="account_biometric_lock_title">Exigir desbloqueo biométrico</string>
+    <string name="account_biometric_lock_subtitle">Solicitar biometría al abrir la app o tras 30 segundos en segundo plano.</string>
+    <string name="account_biometric_lock_unavailable">No hay biometría registrada en este dispositivo. Configúrala primero en los Ajustes del sistema.</string>
+    <string name="account_biometric_prompt_title">Desbloquear MovieApp</string>
+    <string name="account_biometric_prompt_subtitle">Confirma tu identidad para continuar.</string>
+    <string name="account_biometric_prompt_cancel">Cancelar</string>
+
+    <string name="catalog_intro">Estas opciones controlan cómo se solicitan los datos del catálogo de TMDB. Se guardan en este dispositivo (no tu contraseña de TMDB).</string>
+    <string name="catalog_language_title">Idioma del catálogo</string>
+    <string name="catalog_region_label">Región (código ISO de país)</string>
+    <string name="catalog_region_hint">p. ej. US, GB — usado para proveedores y descubrir</string>
+    <string name="catalog_adult_title">Incluir contenido para adultos</string>
+    <string name="catalog_adult_subtitle">Si está activado, descubrir y buscar pueden incluir títulos para adultos.</string>
+    <string name="settings_group_account">Cuenta y sincronización</string>
+    <string name="settings_group_catalog">Preferencias del catálogo</string>
+    <string name="settings_group_appearance">Apariencia</string>
+    <string name="settings_group_storage">En este dispositivo</string>
+    <string name="settings_group_help">Ayuda e información</string>
+</resources>
