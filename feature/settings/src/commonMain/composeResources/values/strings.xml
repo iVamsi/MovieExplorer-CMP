@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="help_faq_heading">Frequently Asked Questions</string>
+    <string name="help_faq_watchlist_q">How do I add a movie to my Watchlist?</string>
+    <string name="help_faq_watchlist_a">Open any movie's detail page and tap the Add to Watchlist button. You can view your full watchlist from the Profile tab.</string>
+    <string name="help_faq_collection_q">How do I create a Collection?</string>
+    <string name="help_faq_collection_a">Go to the Collections tab and tap the + button. Give your collection a name and start adding movies and series to it.</string>
+    <string name="help_faq_tmdb_q">What is TMDB and where does the data come from?</string>
+    <string name="help_faq_tmdb_a">This app uses The Movie Database (TMDB) API to fetch movie and series information, posters, and ratings. TMDB is a community-built movie and TV database.</string>
+    <string name="help_faq_theme_q">How do I change the app theme?</string>
+    <string name="help_faq_theme_a">Open Profile, tap the gear icon for Settings, then Theme. You can choose Light, Dark, or System default.</string>
+    <string name="help_faq_account_q">What does “Sign in with TMDB” do?</string>
+    <string name="help_faq_account_a">Signing in is optional. It lets the app sync favorites, watchlist, star ratings, and favorite people with your TMDB account. Custom collections, rating notes, recent searches, theme, and notification preferences stay on this device only.</string>
+    <string name="help_faq_report_q">How do I report a bug or request a feature?</string>
+    <string name="help_faq_report_a">Visit the GitHub repository linked in Profile → Settings → About. Open a new issue and describe the bug or feature you would like to see.</string>
+
+    <string name="about_app_name">MovieApp</string>
+    <string name="about_version_label">Version %1$s</string>
+    <string name="about_rate_app">Rate the App</string>
+    <string name="about_view_github">View on GitHub</string>
+    <string name="about_open_source_licenses">Open Source Licenses</string>
+
+    <string name="theme_choose_hint">Choose your preferred theme</string>
+    <string name="theme_option_light">Light</string>
+    <string name="theme_option_dark">Dark</string>
+    <string name="theme_option_system">System default</string>
+
+    <string name="language_choose_hint">Choose the language for app menus and labels</string>
+    <string name="language_option_english">English</string>
+    <string name="language_option_spanish">Spanish</string>
+
+    <string name="storage_image_cache_title">Image Cache</string>
+    <string name="storage_cache_mb_used">%1$d MB used</string>
+    <string name="storage_cache_description">Cached movie posters and artwork</string>
+    <string name="storage_clear_cache">Clear Cache</string>
+    <string name="storage_cache_cleared">Image cache cleared</string>
+    <string name="storage_clear_cache_hint">Clearing the cache removes downloaded images. They will be re-downloaded as needed.</string>
+    <string name="storage_offline_library_title">Offline library</string>
+    <string name="storage_offline_empty">Saved movies and series appear here.</string>
+    <string name="storage_offline_clear_all">Clear all</string>
+    <string name="storage_offline_delete">Remove offline item</string>
+    <string name="storage_offline_fallback_title">Title #%1$d</string>
+
+
+    <string name="account_screen_title">Account</string>
+    <string name="account_signed_out_title">Not signed in</string>
+    <string name="account_signed_out_body">Sign in with your TMDB account to sync favorites, watchlist, and ratings across devices. Your data stays under your control; the app uses your own API key from local.properties.</string>
+    <string name="account_sign_in_tmdb">Sign in with TMDB</string>
+    <string name="account_sign_out">Sign out</string>
+    <string name="account_sync_summary">When signed in, changes to favorites, watchlist, and ratings sync with your TMDB account. Custom collections and rating notes stay on this device. Theme, notifications, and search history are always local.</string>
+    <string name="account_error_login_url">Could not start sign-in. Check your network and API key.</string>
+    <string name="account_username_label">Username</string>
+    <string name="account_biometric_lock_title">Require biometric unlock</string>
+    <string name="account_biometric_lock_subtitle">Ask for biometrics when opening the app or resuming after 30 seconds.</string>
+    <string name="account_biometric_lock_unavailable">No biometrics enrolled on this device. Set one up in system Settings first.</string>
+    <string name="account_biometric_prompt_title">Unlock MovieApp</string>
+    <string name="account_biometric_prompt_subtitle">Confirm it's you to continue.</string>
+    <string name="account_biometric_prompt_cancel">Cancel</string>
+
+    <string name="catalog_intro">These options control how TMDB catalog data is requested. They are stored on this device (not your TMDB password).</string>
+    <string name="catalog_language_title">Catalog language</string>
+    <string name="catalog_region_label">Watch region (ISO country code)</string>
+    <string name="catalog_region_hint">e.g. US, GB — used for providers and discover</string>
+    <string name="catalog_adult_title">Include adult content</string>
+    <string name="catalog_adult_subtitle">When enabled, discover and search may include adult titles.</string>
+    <string name="settings_group_account">Account and sync</string>
+    <string name="settings_group_catalog">Catalog preferences</string>
+    <string name="settings_group_appearance">Appearance</string>
+    <string name="settings_group_storage">On this device</string>
+    <string name="settings_group_help">Support and about</string>
+</resources>
