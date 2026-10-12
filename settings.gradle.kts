@@ -35,6 +35,16 @@ kover {
         excludedProjects.addAll(":androidApp", ":core:testing")
         excludedClasses.addAll("*.ComposableSingletons*", "*.*\$*Preview*", "*.generated.resources.*", "com.movieapp.config.*")
         excludesAnnotatedBy.add("androidx.compose.ui.tooling.preview.Preview")
-        verify { rule { bound { minValue = 14 } } }
+        verify {
+            rule { bound { minValue = 14 } }
+            rule("domain") {
+                filters { includedProjects.set(setOf(":core:domain")) }
+                bound { minValue = 80 }
+            }
+            rule("viewmodels") {
+                filters { includedClasses.set(setOf("*ViewModel")) }
+                bound { minValue = 80 }
+            }
+        }
     }
 }
