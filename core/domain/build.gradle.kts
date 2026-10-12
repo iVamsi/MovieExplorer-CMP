@@ -9,6 +9,7 @@ kotlin {
         }
         getByName("androidHostTest").dependencies {
             implementation(lib("konsist"))
+            implementation(project(":core:testing"))
         }
     }
 }
